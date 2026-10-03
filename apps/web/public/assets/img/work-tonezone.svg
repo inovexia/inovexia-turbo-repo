@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" width="880" height="560" role="img" aria-label="ToneZone storefront: service categories, a product grid with prices, and a booking panel">
+<defs>
+  <linearGradient id="tz-bg" x1="0" y1="0" x2="880" y2="560" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#6d5efc"/><stop offset=".5" stop-color="#b4348f"/><stop offset="1" stop-color="#f472b6"/>
+  </linearGradient>
+</defs>
+
+<rect width="880" height="560" rx="18" fill="url(#tz-bg)"/>
+<rect x="24" y="24" width="832" height="512" rx="14" fill="rgba(8,10,23,.6)"/>
+
+<!-- browser chrome + nav -->
+<path d="M24 74h832" stroke="rgba(255,255,255,.16)" stroke-width="1.5"/>
+<circle cx="52" cy="49" r="5" fill="rgba(255,255,255,.5)"/>
+<circle cx="70" cy="49" r="5" fill="rgba(255,255,255,.32)"/>
+<circle cx="88" cy="49" r="5" fill="rgba(255,255,255,.2)"/>
+<rect x="120" y="40" width="92" height="18" rx="9" fill="rgba(255,255,255,.4)"/>
+<g fill="rgba(255,255,255,.28)">
+  <rect x="470" y="43" width="52" height="12" rx="6"/>
+  <rect x="538" y="43" width="60" height="12" rx="6"/>
+  <rect x="614" y="43" width="46" height="12" rx="6"/>
+</g>
+<!-- cart with badge -->
+<path d="M700 42h34l-4 24a6 6 0 0 1-6 5h-16a6 6 0 0 1-6-5z" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="2.2"/>
+<path d="M710 42v-5a7 7 0 0 1 14 0v5" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="2.2"/>
+<circle cx="736" cy="38" r="9" fill="#fff"/>
+<rect x="732" y="34" width="8" height="8" rx="2" fill="rgba(180,52,143,.9)"/>
+
+<!-- hero banner -->
+<rect x="48" y="98" width="784" height="132" rx="12" fill="rgba(255,255,255,.14)"/>
+<rect x="76" y="128" width="210" height="16" rx="8" fill="rgba(255,255,255,.85)"/>
+<rect x="76" y="156" width="300" height="10" rx="5" fill="rgba(255,255,255,.45)"/>
+<rect x="76" y="178" width="240" height="10" rx="5" fill="rgba(255,255,255,.32)"/>
+<rect x="76" y="200" width="112" height="22" rx="11" fill="#fff"/>
+<g fill="rgba(255,255,255,.2)">
+  <circle cx="676" cy="164" r="46"/><circle cx="762" cy="164" r="34"/>
+</g>
+
+<!-- service category chips -->
+<g fill="rgba(255,255,255,.2)">
+  <rect x="48" y="250" width="112" height="28" rx="14"/>
+  <rect x="172" y="250" width="92" height="28" rx="14"/>
+  <rect x="276" y="250" width="104" height="28" rx="14"/>
+  <rect x="392" y="250" width="86" height="28" rx="14"/>
+  <rect x="490" y="250" width="118" height="28" rx="14"/>
+</g>
+<rect x="48" y="250" width="112" height="28" rx="14" fill="rgba(255,255,255,.75)"/>
+
+<!-- product grid: image, title, price, add button -->
+<g>
+  <rect x="48" y="300" width="188" height="212" rx="12" fill="rgba(255,255,255,.12)"/>
+  <rect x="64" y="316" width="156" height="104" rx="9" fill="rgba(255,255,255,.26)"/>
+  <rect x="64" y="434" width="112" height="10" rx="5" fill="rgba(255,255,255,.6)"/>
+  <rect x="64" y="456" width="54" height="14" rx="7" fill="#fff"/>
+  <rect x="64" y="482" width="88" height="18" rx="9" fill="rgba(255,255,255,.34)"/>
+
+  <rect x="252" y="300" width="188" height="212" rx="12" fill="rgba(255,255,255,.12)"/>
+  <rect x="268" y="316" width="156" height="104" rx="9" fill="rgba(255,255,255,.22)"/>
+  <rect x="268" y="434" width="132" height="10" rx="5" fill="rgba(255,255,255,.6)"/>
+  <rect x="268" y="456" width="48" height="14" rx="7" fill="#fff"/>
+  <rect x="268" y="482" width="88" height="18" rx="9" fill="rgba(255,255,255,.34)"/>
+
+  <rect x="456" y="300" width="188" height="212" rx="12" fill="rgba(255,255,255,.12)"/>
+  <rect x="472" y="316" width="156" height="104" rx="9" fill="rgba(255,255,255,.22)"/>
+  <rect x="472" y="434" width="96" height="10" rx="5" fill="rgba(255,255,255,.6)"/>
+  <rect x="472" y="456" width="60" height="14" rx="7" fill="#fff"/>
+  <rect x="472" y="482" width="88" height="18" rx="9" fill="rgba(255,255,255,.34)"/>
+</g>
+
+<!-- booking panel -->
+<rect x="660" y="300" width="172" height="212" rx="12" fill="rgba(255,255,255,.16)"/>
+<rect x="680" y="322" width="92" height="11" rx="5.5" fill="rgba(255,255,255,.7)"/>
+<g fill="rgba(255,255,255,.26)">
+  <rect x="680" y="352" width="132" height="26" rx="8"/>
+  <rect x="680" y="388" width="132" height="26" rx="8"/>
+  <rect x="680" y="424" width="132" height="26" rx="8"/>
+</g>
+<rect x="680" y="466" width="132" height="28" rx="14" fill="#fff"/>
+<path d="m724 480 5 5 10-11" fill="none" stroke="rgba(180,52,143,.95)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

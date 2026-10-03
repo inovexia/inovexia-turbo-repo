@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250" role="img" aria-label="Mobile App Development">
+<defs>
+  <linearGradient id="bg3" x1="0" y1="0" x2="400" y2="250" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#6d5efc"/>
+  </linearGradient>
+  <pattern id="bg3p" width="38" height="38" patternUnits="userSpaceOnUse">
+    <path d="M38 0H0v38" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+  </pattern>
+</defs>
+<rect width="400" height="250" fill="url(#bg3)"/>
+<rect width="400" height="250" fill="url(#bg3p)" opacity=".5"/>
+<g class="bcard__art" fill="none" stroke="rgba(255,255,255,.85)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="126" y="34" width="112" height="186" rx="18" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.6)" stroke-width="2.4"/>
+      <path d="M166 48h32" stroke="rgba(255,255,255,.7)" stroke-width="3" stroke-linecap="round"/>
+      <rect x="142" y="66" width="80" height="36" rx="8" fill="rgba(255,255,255,.4)" stroke="none"/>
+      <rect x="142" y="112" width="36" height="34" rx="7" fill="rgba(255,255,255,.26)" stroke="none"/>
+      <rect x="186" y="112" width="36" height="34" rx="7" fill="rgba(255,255,255,.26)" stroke="none"/>
+      <path d="M142 162h80M142 176h54" stroke="rgba(255,255,255,.6)"/>
+      <rect x="162" y="196" width="40" height="5" rx="2.5" fill="rgba(255,255,255,.55)" stroke="none"/>
+      <rect x="248" y="74" width="98" height="58" rx="11" fill="rgba(255,255,255,.16)" stroke="rgba(255,255,255,.55)"/>
+      <path d="M264 96h50M264 112h30" stroke="rgba(255,255,255,.8)"/>
+      <rect x="56" y="118" width="58" height="58" rx="13" fill="rgba(255,255,255,.14)" stroke="rgba(255,255,255,.5)"/>
+      <path d="m72 148 10 10 20-22" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>              </g>
+</svg>

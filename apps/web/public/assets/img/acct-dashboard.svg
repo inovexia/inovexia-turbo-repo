@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" width="880" height="560" role="img" aria-label="Accounting software dashboard: revenue and expenses, cash flow trend, invoices and tax summary">
+<defs>
+  <linearGradient id="ac-bg" x1="0" y1="0" x2="880" y2="560" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#047857"/><stop offset=".55" stop-color="#0d9488"/><stop offset="1" stop-color="#22d3ee"/>
+  </linearGradient>
+  <linearGradient id="ac-area" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".45"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<rect width="880" height="560" rx="18" fill="url(#ac-bg)"/>
+<rect x="24" y="24" width="832" height="512" rx="14" fill="rgba(8,10,23,.6)"/>
+<path d="M24 76h832" stroke="rgba(255,255,255,0.16)" stroke-width="1.5"/>
+<circle cx="52" cy="50" r="5" fill="rgba(255,255,255,0.55)"/><circle cx="70" cy="50" r="5" fill="rgba(255,255,255,0.34)"/><circle cx="88" cy="50" r="5" fill="rgba(255,255,255,0.22)"/>
+<rect x="360" y="40" width="240" height="20" rx="10" fill="rgba(255,255,255,0.12)"/>
+<path d="M212 76v460" stroke="rgba(255,255,255,0.16)" stroke-width="1.5"/>
+<rect x="48" y="104" width="118" height="12" rx="6" fill="rgba(255,255,255,0.5)"/>
+<rect x="48" y="148" width="140" height="34" rx="9" fill="rgba(255,255,255,0.18)"/><rect x="64" y="160" width="80" height="10" rx="5" fill="rgba(255,255,255,0.7)"/>
+<rect x="48" y="196" width="140" height="34" rx="9" fill="rgba(255,255,255,0.06)"/><rect x="64" y="208" width="98" height="10" rx="5" fill="rgba(255,255,255,0.34)"/>
+<rect x="48" y="244" width="140" height="34" rx="9" fill="rgba(255,255,255,0.06)"/><rect x="64" y="256" width="66" height="10" rx="5" fill="rgba(255,255,255,0.34)"/>
+<rect x="48" y="292" width="140" height="34" rx="9" fill="rgba(255,255,255,0.06)"/><rect x="64" y="304" width="90" height="10" rx="5" fill="rgba(255,255,255,0.34)"/>
+<rect x="48" y="340" width="140" height="34" rx="9" fill="rgba(255,255,255,0.06)"/><rect x="64" y="352" width="74" height="10" rx="5" fill="rgba(255,255,255,0.34)"/>
+<!-- revenue / expenses / profit -->
+<rect x="244" y="104" width="182" height="96" rx="12" fill="rgba(255,255,255,0.14)"/><rect x="266" y="126" width="58" height="9" rx="4.5" fill="rgba(255,255,255,0.45)"/><rect x="266" y="148" width="104" height="22" rx="6" fill="rgba(255,255,255,0.9)"/>
+<path d="m392 160 10-10 10 10" fill="none" stroke="#a7f3d0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="442" y="104" width="182" height="96" rx="12" fill="rgba(255,255,255,0.14)"/><rect x="464" y="126" width="70" height="9" rx="4.5" fill="rgba(255,255,255,0.45)"/><rect x="464" y="148" width="84" height="22" rx="6" fill="rgba(255,255,255,0.9)"/>
+<rect x="640" y="104" width="192" height="96" rx="12" fill="rgba(255,255,255,0.14)"/><rect x="662" y="126" width="52" height="9" rx="4.5" fill="rgba(255,255,255,0.45)"/><rect x="662" y="148" width="96" height="22" rx="6" fill="rgba(255,255,255,0.9)"/>
+<!-- cash flow area chart -->
+<rect x="244" y="220" width="380" height="180" rx="12" fill="rgba(255,255,255,0.1)"/>
+<rect x="268" y="244" width="84" height="10" rx="5" fill="rgba(255,255,255,0.5)"/>
+<path d="M268 360 C300 340 322 352 350 330 C378 308 400 322 428 300 C456 278 480 296 508 272 C536 250 560 262 600 240 L600 380 L268 380 Z" fill="url(#ac-area)"/>
+<path d="M268 360 C300 340 322 352 350 330 C378 308 400 322 428 300 C456 278 480 296 508 272 C536 250 560 262 600 240" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<path d="M268 372 C310 366 340 370 380 358 C420 346 460 356 500 344 C540 332 570 340 600 330" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2.4" stroke-dasharray="6 6" stroke-linecap="round"/>
+<circle cx="600" cy="240" r="6" fill="#fff"/>
+<!-- tax donut -->
+<rect x="640" y="220" width="192" height="180" rx="12" fill="rgba(255,255,255,0.1)"/>
+<rect x="662" y="244" width="70" height="10" rx="5" fill="rgba(255,255,255,0.5)"/>
+<circle cx="736" cy="324" r="46" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="16"/>
+<circle cx="736" cy="324" r="46" fill="none" stroke="#fff" stroke-width="16" stroke-dasharray="180 289" transform="rotate(-90 736 324)" stroke-linecap="round"/>
+<circle cx="736" cy="324" r="46" fill="none" stroke="#a7f3d0" stroke-width="16" stroke-dasharray="60 289" stroke-dashoffset="-190" transform="rotate(-90 736 324)" stroke-linecap="round"/>
+<!-- invoices -->
+<rect x="244" y="420" width="588" height="92" rx="12" fill="rgba(255,255,255,0.1)"/>
+<rect x="268" y="444" width="96" height="10" rx="5" fill="rgba(255,255,255,0.5)"/>
+<g fill="rgba(255,255,255,0.22)"><rect x="268" y="470" width="168" height="22" rx="7"/><rect x="452" y="470" width="168" height="22" rx="7"/><rect x="636" y="470" width="168" height="22" rx="7"/></g>
+<g fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m282 481 5 5 9-10"/><path d="m466 481 5 5 9-10"/></g>
+<circle cx="656" cy="481" r="5" fill="none" stroke="#fde68a" stroke-width="2.2"/>
+</svg>

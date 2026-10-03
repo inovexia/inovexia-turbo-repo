@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250" role="img" aria-label="Modern Website Development">
+<defs>
+  <linearGradient id="bg6" x1="0" y1="0" x2="400" y2="250" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#065f46"/><stop offset="1" stop-color="#22d3ee"/>
+  </linearGradient>
+  <pattern id="bg6p" width="38" height="38" patternUnits="userSpaceOnUse">
+    <path d="M38 0H0v38" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+  </pattern>
+</defs>
+<rect width="400" height="250" fill="url(#bg6)"/>
+<rect width="400" height="250" fill="url(#bg6p)" opacity=".5"/>
+<g class="bcard__art" fill="none" stroke="rgba(255,255,255,.85)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="46" y="40" width="308" height="170" rx="13" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.55)"/>
+      <path d="M46 70h308M104 70v140" stroke="rgba(255,255,255,.4)"/>
+      <rect x="60" y="84" width="30" height="8" rx="4" fill="rgba(255,255,255,.45)" stroke="none"/>
+      <rect x="60" y="102" width="30" height="8" rx="4" fill="rgba(255,255,255,.3)" stroke="none"/>
+      <rect x="60" y="120" width="30" height="8" rx="4" fill="rgba(255,255,255,.3)" stroke="none"/>
+      <rect x="122" y="86" width="216" height="52" rx="9" fill="rgba(255,255,255,.3)" stroke="none"/>
+      <rect x="122" y="152" width="100" height="44" rx="9" fill="rgba(255,255,255,.2)" stroke="none"/>
+      <rect x="238" y="152" width="100" height="44" rx="9" fill="rgba(255,255,255,.2)" stroke="none"/>
+      <rect x="118" y="82" width="224" height="60" rx="11" fill="none" stroke="#fff" stroke-width="2.6"/>
+      <rect x="112" y="76" width="12" height="12" rx="3" fill="#fff" stroke="none"/>
+      <rect x="336" y="76" width="12" height="12" rx="3" fill="#fff" stroke="none"/>
+      <rect x="112" y="136" width="12" height="12" rx="3" fill="#fff" stroke="none"/>
+      <rect x="336" y="136" width="12" height="12" rx="3" fill="#fff" stroke="none"/>
+      <path d="m258 120 8 30 7-12 13 3z" fill="#fff" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/>              </g>
+</svg>

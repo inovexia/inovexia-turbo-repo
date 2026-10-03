@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250" role="img" aria-label="SEO Strategy and Growth">
+<defs>
+  <linearGradient id="bg2" x1="0" y1="0" x2="400" y2="250" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#6d5efc"/><stop offset="1" stop-color="#f472b6"/>
+  </linearGradient>
+  <pattern id="bg2p" width="38" height="38" patternUnits="userSpaceOnUse">
+    <path d="M38 0H0v38" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+  </pattern>
+</defs>
+<rect width="400" height="250" fill="url(#bg2)"/>
+<rect width="400" height="250" fill="url(#bg2p)" opacity=".5"/>
+<g class="bcard__art" fill="none" stroke="rgba(255,255,255,.85)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="52" y="58" width="200" height="138" rx="11" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.5)"/>
+      <rect x="74" y="146" width="20" height="30" rx="4" fill="rgba(255,255,255,.3)" stroke="none"/>
+      <rect x="104" y="128" width="20" height="48" rx="4" fill="rgba(255,255,255,.38)" stroke="none"/>
+      <rect x="134" y="110" width="20" height="66" rx="4" fill="rgba(255,255,255,.46)" stroke="none"/>
+      <rect x="164" y="88" width="20" height="88" rx="4" fill="rgba(255,255,255,.6)" stroke="none"/>
+      <path d="M74 120 116 98 158 82 206 64" stroke="#fff" stroke-width="2.6"/>
+      <path d="M188 62h20v20" stroke="#fff" stroke-width="2.6"/>
+      <circle cx="268" cy="110" r="48" fill="rgba(255,255,255,.14)" stroke="#fff" stroke-width="3"/>
+      <path d="m303 145 32 32" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+      <path d="M248 112v-14M268 112V88M288 112V98" stroke="rgba(255,255,255,.9)" stroke-width="2.6"/>
+      <path d="M244 126h48" stroke="rgba(255,255,255,.55)"/>              </g>
+</svg>

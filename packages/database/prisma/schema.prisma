@@ -1,0 +1,148 @@
+// Inovexia website — data layer (MySQL).
+// Apply with `pnpm db:push` (or import prisma/sql/schema.sql in phpMyAdmin).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum EnquiryType {
+  CONTACT // /contact form
+  QUOTE   // /get-in-touch form
+  PROJECT // /discuss-your-project multi-step brief
+}
+
+enum EnquiryStatus {
+  NEW
+  IN_PROGRESS
+  CLOSED
+}
+
+/// A project enquiry from the Contact, Get in Touch or Discuss Your Project form.
+model Enquiry {
+  id           Int           @id @default(autoincrement())
+  type         EnquiryType
+  status       EnquiryStatus @default(NEW)
+  name         String        @db.VarChar(120)
+  email        String        @db.VarChar(190)
+  phone        String?       @db.VarChar(40)
+  company      String?       @db.VarChar(160)
+  service      String        @db.VarChar(120)
+  /// Contact: message · Get in Touch: details · Discuss: project overview
+  message      String        @db.Text
+  // Discuss Your Project only
+  role         String?       @db.VarChar(120)
+  goals        String?       @db.Text
+  websiteUrl   String?       @db.VarChar(255)
+  projectStage String?       @db.VarChar(60)
+  timeline     String?       @db.VarChar(60)
+  pageUrl      String?       @db.VarChar(255)
+  ip           String?       @db.VarChar(64)
+  userAgent    String?       @db.VarChar(255)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  @@index([type, createdAt])
+  @@index([status])
+  @@map("enquiries")
+}
+
+/// A CV sent from the Careers pop-up on the About page.
+model JobApplication {
+  id        Int      @id @default(autoincrement())
+  name      String   @db.VarChar(120)
+  email     String   @db.VarChar(190)
+  fileName  String   @db.VarChar(255)
+  mimeType  String   @db.VarChar(120)
+  fileSize  Int
+  /// The CV itself (max 5 MB, enforced by the API).
+  file      Bytes    @db.MediumBlob
+  ip        String?  @db.VarChar(64)
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+  @@map("job_applications")
+}
+
+/// A blog post, service, product or case study. Its shape is described in
+/// packages/content (schemas.js for `fields`, template manifests for `page`).
+model Entry {
+  id        Int      @id @default(autoincrement())
+  type      String   @db.VarChar(20) /// blog | service | product | case
+  slug      String   @db.VarChar(160)
+  title     String   @db.VarChar(255)
+  template  String?  @db.VarChar(80) /// its own page's template, null = no page
+  published Boolean  @default(true)
+  sort      Int      @default(0)
+  fields    Json /// the collection's own fields (cards, listings, blog body)
+  page      Json? /// content of its own page (template fields)
+  section   Json? /// content of a per-item page section (products page)
+  seo       Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([type, slug])
+  @@index([type, published, sort])
+  @@map("entries")
+}
+
+/// Edits to a page's content. Only changed fields are stored; everything
+/// else renders with the design's default (packages/content manifests).
+model PageContent {
+  page      String   @id @db.VarChar(80)
+  data      Json
+  updatedAt DateTime @updatedAt
+
+  @@map("page_content")
+}
+
+/// An uploaded image, served from /api/media/:id/:fileName.
+model Media {
+  id        Int      @id @default(autoincrement())
+  fileName  String   @db.VarChar(255)
+  mimeType  String   @db.VarChar(80)
+  size      Int
+  width     Int?
+  height    Int?
+  alt       String   @default("") @db.VarChar(255)
+  data      Bytes    @db.MediumBlob
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+  @@map("media")
+}
+
+/// An admin account. Passwords are scrypt hashes (see src/password.js).
+model User {
+  id           Int       @id @default(autoincrement())
+  email        String    @unique @db.VarChar(190)
+  name         String    @db.VarChar(120)
+  passwordHash String    @db.VarChar(255)
+  lastLoginAt  DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  sessions     Session[]
+
+  @@map("users")
+}
+
+/// A signed-in admin session. Only a SHA-256 of the cookie token is stored,
+/// so a database leak does not hand out working sessions.
+model Session {
+  id        Int      @id @default(autoincrement())
+  tokenHash String   @unique @db.Char(64)
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  ip        String?  @db.VarChar(64)
+  userAgent String?  @db.VarChar(255)
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("sessions")
+}

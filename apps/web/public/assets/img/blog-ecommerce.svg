@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250" role="img" aria-label="Shopify eCommerce Store">
+<defs>
+  <linearGradient id="bg4" x1="0" y1="0" x2="400" y2="250" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#8b5cf6"/>
+  </linearGradient>
+  <pattern id="bg4p" width="38" height="38" patternUnits="userSpaceOnUse">
+    <path d="M38 0H0v38" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+  </pattern>
+</defs>
+<rect width="400" height="250" fill="url(#bg4)"/>
+<rect width="400" height="250" fill="url(#bg4p)" opacity=".5"/>
+<g class="bcard__art" fill="none" stroke="rgba(255,255,255,.85)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="46" y="44" width="308" height="162" rx="13" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.55)"/>
+      <path d="M46 76h308" stroke="rgba(255,255,255,.4)"/>
+      <circle cx="64" cy="60" r="3.4" fill="rgba(255,255,255,.7)" stroke="none"/>
+      <circle cx="76" cy="60" r="3.4" fill="rgba(255,255,255,.45)" stroke="none"/>
+      <rect x="66" y="96" width="76" height="62" rx="9" fill="rgba(255,255,255,.3)" stroke="none"/>
+      <rect x="152" y="96" width="76" height="62" rx="9" fill="rgba(255,255,255,.22)" stroke="none"/>
+      <rect x="66" y="168" width="48" height="7" rx="3.5" fill="rgba(255,255,255,.5)" stroke="none"/>
+      <rect x="152" y="168" width="48" height="7" rx="3.5" fill="rgba(255,255,255,.35)" stroke="none"/>
+      <path d="M252 104h74l-8 60a9 9 0 0 1-9 8h-40a9 9 0 0 1-9-8z" fill="rgba(255,255,255,.16)" stroke="#fff" stroke-width="2.6"/>
+      <path d="M274 104V92a15 15 0 0 1 30 0v12" stroke="#fff" stroke-width="2.6"/>
+      <circle cx="272" cy="188" r="8" fill="#fff" stroke="none"/>
+      <circle cx="308" cy="188" r="8" fill="#fff" stroke="none"/>              </g>
+</svg>

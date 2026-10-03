@@ -1,0 +1,22 @@
+/* Layer order: Tailwind's tokens, then the design, then Tailwind utilities.
+   - Tailwind is prefixed (tw:flex, tw:dark:bg-…) because the design's own
+     class names overlap Tailwind's: without it, Tailwind's .container utility
+     replaced the design's .container and every page lost 40px of gutter.
+   - Preflight (Tailwind's reset) is left out on purpose: the design ships its
+     own base styles in site.css and Preflight would restyle them.
+   - The whole design stylesheet sits in one layer, so its internal cascade is
+     exactly what it was. */
+@layer theme, design, utilities;
+
+@import "tailwindcss/theme.css" layer(theme) prefix(tw);
+@import "../styles/site.css" layer(design);
+@import "../styles/fixes.css" layer(design);
+@import "../styles/discuss.css" layer(design);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/* Admin rich-text editor: links visible while editing. */
+.cms-rich a { color: #4f46e5; text-decoration: underline; }
+.cms-rich:empty::before { content: "Type here…"; color: #94a3b8; }
+
+/* tw:dark: follows the site's theme toggle (<html data-theme>), not the OS. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));

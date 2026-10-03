@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250" role="img" aria-label="Interactive Campaign Microsites">
+<defs>
+  <linearGradient id="bg5" x1="0" y1="0" x2="400" y2="250" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#b4344f"/><stop offset="1" stop-color="#f59e0b"/>
+  </linearGradient>
+  <pattern id="bg5p" width="38" height="38" patternUnits="userSpaceOnUse">
+    <path d="M38 0H0v38" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+  </pattern>
+</defs>
+<rect width="400" height="250" fill="url(#bg5)"/>
+<rect width="400" height="250" fill="url(#bg5p)" opacity=".5"/>
+<g class="bcard__art" fill="none" stroke="rgba(255,255,255,.85)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="74" y="56" width="252" height="140" rx="14" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.6)" stroke-width="2.4"/>
+      <path d="M96 84h96M96 100h60" stroke="rgba(255,255,255,.7)"/>
+      <rect x="96" y="120" width="128" height="56" rx="10" fill="rgba(255,255,255,.3)" stroke="none"/>
+      <path d="M232 120h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8h-72z" fill="rgba(255,255,255,.55)" stroke="none"/>
+      <path d="M232 120c-6 8 6 12 0 20s6 12 0 20 6 12 0 16" stroke="rgba(255,255,255,.9)" stroke-width="2.4"/>
+      <path d="m268 132 6 13 14 2-10 10 2 14-12-7-12 7 2-14-10-10 14-2z" fill="rgba(255,255,255,.9)" stroke="none"/>
+      <path d="M126 142h68M126 158h40" stroke="rgba(255,255,255,.85)"/>
+      <path d="M56 46v18M47 55h18M342 178v16M334 186h16M336 62v14M329 69h14" stroke="rgba(255,255,255,.85)" stroke-width="2.4" stroke-linecap="round"/>              </g>
+</svg>

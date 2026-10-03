@@ -1,0 +1,131 @@
+/* Discuss Your Project — multi-step brief (app/discuss-your-project).
+   Built only from the design's tokens (--brand, --border, --muted…), so it
+   follows the light/dark theme like every other component. */
+
+/* ---------- Card ---------- */
+.dsp { gap: 14px; }
+.dsp .field { gap: 6px; }
+.dsp .field__err { min-height: 0; margin-top: -1px; }
+.dsp .field__err:empty { display: none; }
+.dsp .form__head { margin-bottom: 4px; }
+.dsp .form__head .eyebrow { margin-bottom: 8px; }
+.dsp .form__head p { margin-top: 8px; }
+.dsp .form__head h2:focus { outline: none; }
+.dsp textarea { min-height: 112px; }
+.dsp textarea.dsp__short { min-height: 84px; }
+
+/* ---------- Stepper ---------- */
+.dsp__steps {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;
+}
+.dsp__step {
+  display: flex; align-items: center; gap: 10px; min-width: 0;
+  font-size: .8rem; font-weight: 600; color: var(--muted);
+  transition: color .4s var(--ease);
+}
+.dsp__num {
+  flex: none; width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: var(--font-mono); font-size: .7rem; letter-spacing: .04em;
+  border: 1px solid var(--border-2); background: var(--bg); color: var(--muted);
+  transition: background .4s var(--ease), color .4s var(--ease), border-color .4s var(--ease), box-shadow .4s var(--ease);
+}
+.dsp__lbl { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dsp__step.is-current { color: var(--heading); }
+.dsp__step.is-current .dsp__num {
+  color: #fff; border-color: transparent;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  box-shadow: 0 8px 20px -8px rgba(109, 94, 252, .7);
+}
+.dsp__step.is-done { color: var(--text); }
+.dsp__step.is-done .dsp__num { color: var(--brand-soft); border-color: transparent; background: rgba(109, 94, 252, .13); }
+
+.dsp__bar { height: 3px; border-radius: 3px; background: var(--border); overflow: hidden; margin-bottom: 6px; }
+.dsp__bar i {
+  display: block; height: 100%; transform-origin: left; transform: scaleX(var(--p, 0));
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  transition: transform .6s var(--ease);
+}
+
+/* ---------- Step panel: slides in from the side it came from ---------- */
+.dsp__panel { display: grid; gap: 14px; animation: dspIn .5s var(--ease) both; }
+.dsp__panel.is-back { animation-name: dspBack; }
+@keyframes dspIn { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: none; } }
+@keyframes dspBack { from { opacity: 0; transform: translateX(-18px); } to { opacity: 1; transform: none; } }
+
+/* ---------- Footer ---------- */
+.dsp__foot { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 8px; }
+.dsp__foot .btn--primary { margin-left: auto; }
+/* .btn--ghost sets no background (it was written for links), so a <button>
+   keeps the browser's white one — invisible text in the dark theme. */
+.dsp__back { background: transparent; }
+.dsp__back:hover { background: var(--surface-2); }
+.dsp__foot .btn:disabled { opacity: .7; cursor: progress; }
+.dsp__note { font-size: .8rem; color: var(--muted); text-align: right; }
+
+/* ---------- Confirmation ---------- */
+.dsp-done { animation: dspIn .6s var(--ease) both; }
+.dsp-done:focus { outline: none; }
+.dsp-done__badge {
+  width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; color: #fff;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  box-shadow: 0 16px 36px -14px rgba(109, 94, 252, .75);
+}
+.dsp-done__badge path { stroke-dasharray: 22; stroke-dashoffset: 22; animation: dspTick .6s .3s var(--ease) forwards; }
+@keyframes dspTick { to { stroke-dashoffset: 0; } }
+.dsp-done .eyebrow { margin-top: 4px; }
+.dsp-done h2 { font-size: clamp(1.3rem, 2.2vw, 1.72rem); }
+.dsp-done__lead { color: var(--muted); font-size: .95rem; }
+.dsp-done__lead b, .dsp-done__soon b { color: var(--heading); font-weight: 600; }
+
+.dsp-done__sum { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 0; }
+.dsp-done__sum div {
+  display: inline-flex; gap: 7px; padding: 7px 13px; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--surface-2); font-size: .82rem;
+}
+.dsp-done__sum dt { color: var(--muted); }
+.dsp-done__sum dd { margin: 0; color: var(--heading); font-weight: 600; }
+
+.dsp-done__label {
+  margin-top: 6px; font-family: var(--font-mono); font-size: .69rem; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--brand-soft);
+}
+.dsp-done__next {
+  list-style: none; margin: 0; padding: 0; counter-reset: dsp;
+  border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg);
+}
+.dsp-done__next li {
+  counter-increment: dsp; display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 2px 12px;
+  padding: 14px 16px; border-top: 1px solid var(--border);
+}
+.dsp-done__next li:first-child { border-top: 0; }
+.dsp-done__next li::before {
+  content: "0" counter(dsp); grid-row: span 2; padding-top: 3px;
+  font-family: var(--font-mono); font-size: .74rem; color: var(--brand-soft);
+}
+.dsp-done__next b { color: var(--heading); font-size: .95rem; }
+.dsp-done__next span { color: var(--muted); font-size: .87rem; line-height: 1.55; }
+
+.dsp-done__soon { font-size: .88rem; color: var(--muted); }
+.dsp-done__soon a { color: var(--brand-soft); font-weight: 600; text-decoration: none; }
+.dsp-done__soon a:hover { text-decoration: underline; }
+.dsp-done__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+
+/* ---------- Left column ---------- */
+.page-discuss .chero__grid { align-items: center; }
+
+/* ---------- Small screens ---------- */
+@media (max-width: 560px) {
+  .dsp__step:not(.is-current) .dsp__lbl { display: none; }
+  .dsp__steps { display: flex; }
+  .dsp__step.is-current { flex: 1; }
+  .dsp__foot .btn--primary { flex: 1; justify-content: center; }
+  .dsp__note { text-align: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dsp__panel, .dsp-done { animation: none; }
+  .dsp-done__badge path { animation: none; stroke-dashoffset: 0; }
+  .dsp__bar i { transition: none; }
+}

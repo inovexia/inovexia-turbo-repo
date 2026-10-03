@@ -1,0 +1,16 @@
+/* Fixes on top of the design stylesheet. site.css is regenerated from the
+   design by `pnpm convert:html`, so corrections live here instead; this file
+   loads straight after it, in the same cascade layer. */
+
+/* Select chevron. The design draws it as .field--sel::after at a fixed
+   bottom offset of the whole .field, which also holds the error line under
+   the select, so the arrow sits low in the box (Contact page). Use the
+   approach the design already uses on the Get in Touch form: a background
+   on the select itself, centred vertically whatever is around it. */
+.field--sel::after { display: none; }
+.field--sel select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='m5 8 5 5 5-5' fill='none' stroke='%237a83a6' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+}

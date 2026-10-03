@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250" role="img" aria-label="Financial Management System">
+<defs>
+  <linearGradient id="bg1" x1="0" y1="0" x2="400" y2="250" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#4c3fdc"/><stop offset="1" stop-color="#22d3ee"/>
+  </linearGradient>
+  <pattern id="bg1p" width="38" height="38" patternUnits="userSpaceOnUse">
+    <path d="M38 0H0v38" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+  </pattern>
+</defs>
+<rect width="400" height="250" fill="url(#bg1)"/>
+<rect width="400" height="250" fill="url(#bg1p)" opacity=".5"/>
+<g class="bcard__art" fill="none" stroke="rgba(255,255,255,.85)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="58" y="52" width="284" height="150" rx="12" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.55)"/>
+      <path d="M58 82h284" stroke="rgba(255,255,255,.4)"/>
+      <circle cx="74" cy="67" r="3.4" fill="rgba(255,255,255,.7)" stroke="none"/>
+      <circle cx="86" cy="67" r="3.4" fill="rgba(255,255,255,.45)" stroke="none"/>
+      <rect x="76" y="140" width="22" height="44" rx="5" fill="rgba(255,255,255,.3)" stroke="none"/>
+      <rect x="108" y="122" width="22" height="62" rx="5" fill="rgba(255,255,255,.42)" stroke="none"/>
+      <rect x="140" y="152" width="22" height="32" rx="5" fill="rgba(255,255,255,.3)" stroke="none"/>
+      <rect x="172" y="104" width="22" height="80" rx="5" fill="rgba(255,255,255,.55)" stroke="none"/>
+      <path d="M78 132 110 114 142 138 174 96 206 108" stroke="#fff" stroke-width="2.6"/>
+      <circle cx="206" cy="108" r="4.6" fill="#fff" stroke="none"/>
+      <rect x="228" y="100" width="96" height="70" rx="9" fill="rgba(255,255,255,.16)" stroke="rgba(255,255,255,.5)"/>
+      <path d="M244 122h64M244 138h40" stroke="rgba(255,255,255,.75)"/>
+      <path d="M252 152h12" stroke="rgba(255,255,255,.5)"/>              </g>
+</svg>

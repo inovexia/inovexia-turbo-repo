@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img" aria-label="Before and after: a desk of paper ledgers and receipts beside an automated ledger view with reconciled transactions">
+<defs>
+  <linearGradient id="fig-l" x1="0" y1="0" x2="440" y2="400" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#64748b"/><stop offset="1" stop-color="#334155"/>
+  </linearGradient>
+  <linearGradient id="fig-r" x1="440" y1="0" x2="880" y2="400" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#4c3fdc"/><stop offset="1" stop-color="#22d3ee"/>
+  </linearGradient>
+</defs>
+
+<!-- manual side -->
+<rect width="440" height="400" rx="16" fill="url(#fig-l)"/>
+<g fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="58" y="96" width="150" height="196" rx="8" fill="rgba(255,255,255,.12)"/>
+  <path d="M84 132h98M84 160h98M84 188h64M84 216h98M84 244h72"/>
+  <rect x="96" y="70" width="150" height="196" rx="8" fill="rgba(255,255,255,.14)" transform="rotate(-7 171 168)"/>
+  <rect x="236" y="120" width="128" height="170" rx="8" fill="rgba(255,255,255,.1)" transform="rotate(6 300 205)"/>
+  <path d="M262 160h78M262 186h78M262 212h50" transform="rotate(6 300 205)"/>
+</g>
+<circle cx="344" cy="86" r="26" fill="rgba(0,0,0,.28)"/>
+<path d="M334 76h20M334 86h20M334 96h12" stroke="rgba(255,255,255,.8)" stroke-width="2.4" stroke-linecap="round"/>
+<rect x="58" y="330" width="120" height="12" rx="6" fill="rgba(255,255,255,.45)"/>
+
+<!-- automated side -->
+<rect x="440" width="440" height="400" rx="16" fill="url(#fig-r)"/>
+<rect x="492" y="74" width="336" height="252" rx="12" fill="rgba(8,10,23,.5)"/>
+<path d="M492 116h336" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+<rect x="516" y="90" width="96" height="10" rx="5" fill="rgba(255,255,255,.55)"/>
+<g>
+  <rect x="516" y="138" width="288" height="34" rx="8" fill="rgba(255,255,255,.14)"/>
+  <rect x="516" y="184" width="288" height="34" rx="8" fill="rgba(255,255,255,.14)"/>
+  <rect x="516" y="230" width="288" height="34" rx="8" fill="rgba(255,255,255,.14)"/>
+  <rect x="516" y="276" width="288" height="34" rx="8" fill="rgba(255,255,255,.1)"/>
+</g>
+<g fill="rgba(255,255,255,.45)">
+  <rect x="536" y="150" width="92" height="10" rx="5"/>
+  <rect x="536" y="196" width="118" height="10" rx="5"/>
+  <rect x="536" y="242" width="76" height="10" rx="5"/>
+  <rect x="536" y="288" width="104" height="10" rx="5"/>
+</g>
+<g fill="#fff">
+  <rect x="694" y="148" width="48" height="14" rx="7"/>
+  <rect x="694" y="194" width="48" height="14" rx="7"/>
+  <rect x="694" y="240" width="48" height="14" rx="7"/>
+</g>
+<g fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m766 152 5 5 10-11"/><path d="m766 198 5 5 10-11"/><path d="m766 244 5 5 10-11"/>
+</g>
+<circle cx="777" cy="293" r="7" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2.4" stroke-dasharray="4 4"/>
+</svg>
