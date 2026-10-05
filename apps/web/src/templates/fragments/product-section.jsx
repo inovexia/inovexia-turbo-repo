@@ -60,7 +60,7 @@ export default function ProductSection({ c: it, i: i }) {
                     {it.l("pdWslideList").map((it2, i2) => (
                       <Fragment key={i2}>
                         {i2 > 0 && " "}
-                        <img className="pd-wslide" src={it2.a("image")} alt={it2.a("imageAlt")} data-url={it2.t("imageUrl")} width="1410" height="736" loading="lazy" decoding="async" aria-hidden="true" />
+                        <img className="pd-wslide" src={it2.a("image")} alt={it2.a("imageAlt")} data-url={it2.t("imageUrl")} width="1200" height="797" loading="lazy" decoding="async" aria-hidden="true" />
                       </Fragment>
                     ))}
                   </div>

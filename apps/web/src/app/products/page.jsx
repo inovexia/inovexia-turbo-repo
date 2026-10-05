@@ -9,11 +9,11 @@ import { loadPage, pageMetadata } from '@/lib/cms/content';
 import ProductSections from '@/components/cms/ProductSections';
 
 const META = {
-  "title": "LMS & Accounting Software Solutions for Businesses & Educational Institutions | Inovexia",
-  "description": "Discover advanced LMS and Accounting Software solutions designed to streamline learning management, finance operations, reporting, payroll, and business growth.",
+  "title": "Examiner & Accounting Software Solutions for Businesses & Educational Institutions | Inovexia",
+  "description": "Discover Examiner online examination and Accounting Software solutions designed to streamline assessments, finance operations, reporting, payroll, and business growth.",
   "openGraph": {
-    "title": "LMS & Accounting Software Solutions for Businesses & Educational Institutions | Inovexia",
-    "description": "Discover advanced LMS and Accounting Software solutions designed to streamline learning management, finance operations, reporting, payroll, and business growth.",
+    "title": "Examiner & Accounting Software Solutions for Businesses & Educational Institutions | Inovexia",
+    "description": "Discover Examiner online examination and Accounting Software solutions designed to streamline assessments, finance operations, reporting, payroll, and business growth.",
     "type": "website"
   }
 };
@@ -76,7 +76,7 @@ export default async function Page() {
         </section>
         {/* ============ PRODUCTS ============
            Each product: copy beside the real product (browser window, plus the
-           student app for the LMS), then its five features as the site's
+           mobile app for Examiner), then its features as the site's
            standard feature cards. The second product is mirrored.
         */}
         <ProductSections />

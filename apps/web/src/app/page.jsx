@@ -275,13 +275,13 @@ export default async function Page() {
             </div>
           </div>
         </section>
-        {/* ============ LMS APP ============ */}
+        {/* ============ OUR APPS ============ */}
         <section className="section section--app section--band" id="product">
           {/* Pinned stage: the section is held for a few screens of scroll and the
              scroll position scrolls the phone through the app's screens. Only
              engaged where there is room (see .pstage in the CSS) — elsewhere it is
              an ordinary section and the phone advances on its own.
-             LMS / Accounting tabs swap the copy, the desktop screenshot, the chips
+             Examiner / Accounting tabs swap the copy, the desktop screenshot, the chips
              and the phone's screens (from the templates below); main.js re-reads
              the strip on the 'inovexia:app-swap' event.
           */}
@@ -300,56 +300,36 @@ export default async function Page() {
                       ))}{" "}
                       <span className="apptabs__ink" aria-hidden="true" />
                     </div>{" "}
-                    <div className="apppane" id="appPaneLms" role="tabpanel" aria-labelledby="appTabLms" data-app-pane="lms">
-                      <h2 className="section__title" data-mask="">
-                        <span className="m" style={{ "--i": "0" }}>
-                          <span className="m__i" dangerouslySetInnerHTML={{ __html: c.h("product.titleLine") }} />
-                        </span>{" "}
-                        <span className="m" style={{ "--i": "1" }}>
-                          <span className="m__i">{c.t("product.titleLine2")}</span>
-                        </span>
-                      </h2>
-                      <p className="section__sub reveal" data-delay="2">{c.t("product.sub")}</p>
-                      <ul className="product__features product__features--steps reveal" data-delay="3">
-                        {c.l("product.itemList").map((it, i) => (
-                          <Fragment key={i}>
-                            {i > 0 && " "}
-                            <li>
-                              <button type="button" className="appf" data-screen={String(i + 1)}>
-                                <span className="tick" aria-hidden="true" />{" "}
-                                {it.t("appfText")}
-                              </button>
-                            </li>
-                          </Fragment>
-                        ))}
-                      </ul>{" "}
-                      <div className="product__actions reveal" data-delay="4" dangerouslySetInnerHTML={{ __html: c.h("product.actions") }} />
-                    </div>{" "}
-                    <div className="apppane" id="appPaneAcct" role="tabpanel" aria-labelledby="appTabAcct" data-app-pane="acct" hidden>
-                      <h2 className="section__title" data-mask="">
-                        <span className="m" style={{ "--i": "0" }}>
-                          <span className="m__i" dangerouslySetInnerHTML={{ __html: c.h("product.titleLine3") }} />
-                        </span>{" "}
-                        <span className="m" style={{ "--i": "1" }}>
-                          <span className="m__i">{c.t("product.titleLine4")}</span>
-                        </span>
-                      </h2>
-                      <p className="section__sub reveal" data-delay="2">{c.t("product.sub2")}</p>
-                      <ul className="product__features product__features--steps reveal" data-delay="3">
-                        {c.l("product.itemList2").map((it, i) => (
-                          <Fragment key={i}>
-                            {i > 0 && " "}
-                            <li>
-                              <button type="button" className="appf" data-screen={String(i)}>
-                                <span className="tick" aria-hidden="true" />{" "}
-                                {it.t("appfText")}
-                              </button>
-                            </li>
-                          </Fragment>
-                        ))}
-                      </ul>{" "}
-                      <div className="product__actions reveal" data-delay="4" dangerouslySetInnerHTML={{ __html: c.h("product.actions2") }} />
-                    </div>
+                    {c.l("product.apppaneList").map((it, i) => (
+                      <Fragment key={i}>
+                        {i > 0 && " "}
+                        <div className="apppane" id={it.a("apppaneId")} role="tabpanel" aria-labelledby={it.a("apppaneLabelledby")} data-app-pane={it.a("apppaneAppPane")} hidden={it.a("apppaneHidden") ? true : undefined}>
+                          <h2 className="section__title" data-mask="">
+                            <span className="m" style={{ "--i": "0" }}>
+                              <span className="m__i" dangerouslySetInnerHTML={{ __html: it.h("titleLine") }} />
+                            </span>{" "}
+                            <span className="m" style={{ "--i": "1" }}>
+                              <span className="m__i">{it.t("titleLine2")}</span>
+                            </span>
+                          </h2>
+                          <p className="section__sub reveal" data-delay="2">{it.t("sub")}</p>
+                          <ul className="product__features product__features--steps reveal" data-delay="3">
+                            {it.l("itemList").map((it2, i2) => (
+                              <Fragment key={i2}>
+                                {i2 > 0 && " "}
+                                <li>
+                                  <button type="button" className="appf" data-screen={String(i2 + 1)}>
+                                    <span className="tick" aria-hidden="true" />{" "}
+                                    {it2.t("appfText")}
+                                  </button>
+                                </li>
+                              </Fragment>
+                            ))}
+                          </ul>{" "}
+                          <div className="product__actions reveal" data-delay="4" dangerouslySetInnerHTML={{ __html: it.h("actions") }} />
+                        </div>
+                      </Fragment>
+                    ))}
                   </div>{" "}
                   {/* Desktop app screenshot behind, the phone in front. */}
                   <div className="product__visual reveal reveal--zoom" data-delay="2">
@@ -386,14 +366,14 @@ export default async function Page() {
                           </div>
                         </div>
                       </div>{" "}
-                      <template id="appTplLms" dangerouslySetInnerHTML={{ __html: "\n              <img src=\"/assets/img/lms-app-home.svg\" alt=\"App home screen with the next class, quick-access tiles and course progress\" data-cap=\"Home — next class, quick access and progress\" width=\"360\" height=\"780\" loading=\"eager\" decoding=\"async\" />\n              <img src=\"/assets/img/lms-app-classes.svg\" alt=\"Class schedule with live and upcoming sessions\" data-cap=\"Classes — live and upcoming sessions, one tap to join\" width=\"360\" height=\"780\" loading=\"lazy\" decoding=\"async\" />\n              <img src=\"/assets/img/lms-app-courses.svg\" alt=\"Course list with lessons and progress for each batch\" data-cap=\"Courses — lessons, notes and recordings per batch\" width=\"360\" height=\"780\" loading=\"lazy\" decoding=\"async\" />\n              <img src=\"/assets/img/lms-app-fees.svg\" alt=\"Fee collection summary and recent payments\" data-cap=\"Fees — collections, dues and reminders handled for you\" width=\"360\" height=\"780\" loading=\"lazy\" decoding=\"async\" />\n              <img src=\"/assets/img/lms-app-store.svg\" alt=\"Your academy’s own branded app on the app store\" data-cap=\"Your brand — published on Google Play and the App Store\" width=\"360\" height=\"780\" loading=\"lazy\" decoding=\"async\" />\n          " }} />
+                      <template id="appTplLms" dangerouslySetInnerHTML={{ __html: "\n              <img src=\"/assets/img/examiner-02-dashboard-mobile.png\" alt=\"Examiner dashboard on mobile with user counts and pending approvals\" data-cap=\"Dashboard — users, active learners and pending approvals at a glance\" width=\"360\" height=\"780\" loading=\"eager\" decoding=\"async\" />\n              <img src=\"/assets/img/examiner-03-test-mobile.png\" alt=\"Taking a test on mobile with the question palette\" data-cap=\"Take a test — question palette, bookmarks and live camera proctoring\" width=\"360\" height=\"780\" loading=\"lazy\" decoding=\"async\" />\n              <img src=\"/assets/img/examiner-05-manage-test-mobile.png\" alt=\"Managing a test on mobile\" data-cap=\"Manage tests — publish, enroll, preview, print and export\" width=\"360\" height=\"780\" loading=\"lazy\" decoding=\"async\" />\n              <img src=\"/assets/img/examiner-04-settings-mobile.png\" alt=\"Examiner settings on mobile\" data-cap=\"Your brand — app name, logo and favicon in one place\" width=\"360\" height=\"780\" loading=\"lazy\" decoding=\"async\" />\n              <img src=\"/assets/img/examiner-01-login-mobile.png\" alt=\"Examiner sign-in on mobile\" data-cap=\"Secure sign-in — captcha, OTP login and self sign-up\" width=\"360\" height=\"780\" loading=\"lazy\" decoding=\"async\" />\n          " }} />
                       <template id="appTplAcct" dangerouslySetInnerHTML={{ __html: "\n              <img src=\"/assets/img/acct-app.svg\" alt=\"Accounting app overview: cash balance, income and expenses, and recent invoices\" data-cap=\"Overview — cash balance, income and expenses at a glance\" width=\"360\" height=\"780\" loading=\"eager\" decoding=\"async\" />\n              <img src=\"/assets/img/acct-app-invoices.svg\" alt=\"Invoices list with paid, due and overdue invoices\" data-cap=\"Invoices — sent, due, paid and overdue at a glance\" width=\"360\" height=\"780\" loading=\"lazy\" decoding=\"async\" />\n              <img src=\"/assets/img/acct-app-reports.svg\" alt=\"Quarterly profit and loss with downloadable statements\" data-cap=\"Reports — P&amp;L, balance sheet, cash flow and tax, export-ready\" width=\"360\" height=\"780\" loading=\"lazy\" decoding=\"async\" />\n              <img src=\"/assets/img/acct-app-payroll.svg\" alt=\"Next payroll total and employee salaries with approval status\" data-cap=\"Payroll — salaries, deductions and approvals in one run\" width=\"360\" height=\"780\" loading=\"lazy\" decoding=\"async\" />\n          " }} />{" "}
                       <div className="appx__chip appx__chip--1" data-app-pane="lms" aria-hidden="true" dangerouslySetInnerHTML={{ __html: c.h("product.chip") }} />{" "}
                       <div className="appx__chip appx__chip--2" data-app-pane="lms" aria-hidden="true" dangerouslySetInnerHTML={{ __html: c.h("product.chip2") }} />{" "}
                       <div className="appx__chip appx__chip--3" data-app-pane="lms" aria-hidden="true">
                         <svg viewBox="0 0 24 24" width="15" height="15">
-                          <path d="M12 4 2 9l10 5 10-5z" />
-                          <path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5" />
+                          <path d="M12 3.2 20 6.4v5.3c0 4.6-3.2 8-8 9.1-4.8-1.1-8-4.5-8-9.1V6.4z" />
+                          <path d="m9 12 2.2 2.2L15.4 10" />
                         </svg>{" "}
                         {c.t("product.chipText")}
                       </div>{" "}

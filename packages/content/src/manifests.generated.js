@@ -1925,7 +1925,7 @@ const manifests = {
        "nodeD": ".50s",
        "nodeC": "#ec4899",
        "icon": "<path d=\"M12 4 2 9l10 5 10-5z\"/><path d=\"M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5\"/>",
-       "text": "<b>LMS</b><small>Our Product</small>"
+       "text": "<b>Examiner</b><small>Our Product</small>"
       }
      ]
     },
@@ -2175,7 +2175,7 @@ const manifests = {
      "key": "product.eyebrow",
      "kind": "text",
      "label": "Eyebrow",
-     "section": "LMS app",
+     "section": "Our apps",
      "default": "02 — Our Apps"
     },
     {
@@ -2219,10 +2219,10 @@ const manifests = {
        "advanced": true
       }
      ],
-     "section": "LMS app",
+     "section": "Our apps",
      "default": [
       {
-       "button": "LMS",
+       "button": "Examiner",
        "buttonId": "appTabLms",
        "buttonApp": "lms",
        "buttonControls": "appPaneLms",
@@ -2238,118 +2238,131 @@ const manifests = {
      ]
     },
     {
-     "key": "product.titleLine",
-     "kind": "rich",
-     "label": "Title Line",
-     "section": "LMS app",
-     "default": "An <span class=\"grad\">LMS app</span> built"
-    },
-    {
-     "key": "product.titleLine2",
-     "kind": "text",
-     "label": "Title Line 2",
-     "section": "LMS app",
-     "default": "around your academy."
-    },
-    {
-     "key": "product.sub",
-     "kind": "text",
-     "label": "Sub",
-     "section": "LMS app",
-     "default": "For coaching institutes, tuition centres and individual tutors. We run fee collection, class scheduling, course content and online classrooms for you — under your own brand, on Google Play and the App Store."
-    },
-    {
-     "key": "product.itemList",
+     "key": "product.apppaneList",
      "kind": "list",
-     "label": "Item List",
-     "itemLabel": "Item",
+     "label": "Apppane List",
+     "itemLabel": "Apppane",
      "item": [
       {
-       "key": "appfText",
+       "key": "apppaneId",
+       "kind": "attr",
+       "label": "Apppane Id",
+       "path": "@id",
+       "advanced": true
+      },
+      {
+       "key": "apppaneLabelledby",
+       "kind": "attr",
+       "label": "Apppane Labelledby",
+       "path": "@aria-labelledby",
+       "advanced": true
+      },
+      {
+       "key": "apppaneAppPane",
+       "kind": "attr",
+       "label": "Apppane App Pane",
+       "path": "@data-app-pane",
+       "advanced": true
+      },
+      {
+       "key": "apppaneHidden",
+       "kind": "attr",
+       "label": "Apppane Hidden",
+       "path": "@hidden",
+       "advanced": true,
+       "optional": true
+      },
+      {
+       "key": "titleLine",
+       "kind": "rich",
+       "label": "Title Line",
+       "path": "/0/0/0#block"
+      },
+      {
+       "key": "titleLine2",
        "kind": "text",
-       "label": "Appf Text",
-       "path": "/0#0"
+       "label": "Title Line 2",
+       "path": "/0/1/0#block"
+      },
+      {
+       "key": "sub",
+       "kind": "text",
+       "label": "Sub",
+       "path": "/1#block"
+      },
+      {
+       "key": "itemList",
+       "kind": "list",
+       "label": "Item List",
+       "path": "/2#run1",
+       "itemLabel": "Item",
+       "item": [
+        {
+         "key": "appfText",
+         "kind": "text",
+         "label": "Appf Text",
+         "path": "/0#0"
+        }
+       ]
+      },
+      {
+       "key": "actions",
+       "kind": "rich",
+       "label": "Actions",
+       "path": "/3#block"
       }
      ],
-     "section": "LMS app",
+     "section": "Our apps",
      "default": [
       {
-       "appfText": "Class scheduling and live online classrooms"
+       "apppaneId": "appPaneLms",
+       "apppaneLabelledby": "appTabLms",
+       "apppaneAppPane": "lms",
+       "apppaneHidden": "",
+       "titleLine": "Online exams with <span class=\"grad\">Examiner</span>",
+       "titleLine2": "fair, secure and instant.",
+       "sub": "Create, schedule and proctor online tests for schools, institutes and recruiters — question banks, secure sign-in, live camera monitoring and instant results, all under your own brand.",
+       "itemList": [
+        {
+         "appfText": "Timed tests with live camera proctoring"
+        },
+        {
+         "appfText": "Publish, enroll and export tests in a few taps"
+        },
+        {
+         "appfText": "Your own name, logo and favicon"
+        },
+        {
+         "appfText": "Captcha, OTP sign-in and approval of new users"
+        }
+       ],
+       "actions": "<a href=\"/product/examiner\" class=\"btn btn--text\">Explore Examiner Software →</a>"
       },
       {
-       "appfText": "Course content hosted for every batch"
-      },
-      {
-       "appfText": "Fee collection handled end to end"
-      },
-      {
-       "appfText": "Your own brand on Google Play and the App Store"
+       "apppaneId": "appPaneAcct",
+       "apppaneLabelledby": "appTabAcct",
+       "apppaneAppPane": "acct",
+       "apppaneHidden": "true",
+       "titleLine": "Smart <span class=\"grad\">Accounting</span>",
+       "titleLine2": "for growing businesses.",
+       "sub": "Manage finances, invoices, taxes, payroll and business transactions through one secure, intelligent platform built for modern businesses — on the web and in the app.",
+       "itemList": [
+        {
+         "appfText": "Cash balance, income and expenses at a glance"
+        },
+        {
+         "appfText": "Invoices tracked from sent to paid"
+        },
+        {
+         "appfText": "Real-time P&L, balance sheet and tax reports"
+        },
+        {
+         "appfText": "Payroll, deductions and approvals in one run"
+        }
+       ],
+       "actions": "<a href=\"/products#accounting\" class=\"btn btn--text\">Explore Accounting Software →</a>"
       }
      ]
-    },
-    {
-     "key": "product.actions",
-     "kind": "rich",
-     "label": "Actions",
-     "section": "LMS app",
-     "default": "<a href=\"/product/lms\" class=\"btn btn--text\">Explore LMS Software →</a>"
-    },
-    {
-     "key": "product.titleLine3",
-     "kind": "rich",
-     "label": "Title Line 3",
-     "section": "LMS app",
-     "default": "Smart <span class=\"grad\">Accounting</span>"
-    },
-    {
-     "key": "product.titleLine4",
-     "kind": "text",
-     "label": "Title Line 4",
-     "section": "LMS app",
-     "default": "for growing businesses."
-    },
-    {
-     "key": "product.sub2",
-     "kind": "text",
-     "label": "Sub 2",
-     "section": "LMS app",
-     "default": "Manage finances, invoices, taxes, payroll and business transactions through one secure, intelligent platform built for modern businesses — on the web and in the app."
-    },
-    {
-     "key": "product.itemList2",
-     "kind": "list",
-     "label": "Item List 2",
-     "itemLabel": "Item",
-     "item": [
-      {
-       "key": "appfText",
-       "kind": "text",
-       "label": "Appf Text",
-       "path": "/0#0"
-      }
-     ],
-     "section": "LMS app",
-     "default": [
-      {
-       "appfText": "Cash balance, income and expenses at a glance"
-      },
-      {
-       "appfText": "Invoices tracked from sent to paid"
-      },
-      {
-       "appfText": "Real-time P&L, balance sheet and tax reports"
-      },
-      {
-       "appfText": "Payroll, deductions and approvals in one run"
-      }
-     ]
-    },
-    {
-     "key": "product.actions2",
-     "kind": "rich",
-     "label": "Actions 2",
-     "section": "LMS app",
-     "default": "<a href=\"/products#accounting\" class=\"btn btn--text\">Explore Accounting Software →</a>"
     },
     {
      "key": "product.textList",
@@ -2379,10 +2392,10 @@ const manifests = {
        "optional": true
       }
      ],
-     "section": "LMS app",
+     "section": "Our apps",
      "default": [
       {
-       "text": "lms.youracademy.com/dashboard",
+       "text": "exam.youracademy.com/dashboard",
        "textAppPane": "lms",
        "textHidden": ""
       },
@@ -2441,14 +2454,14 @@ const manifests = {
        "optional": true
       }
      ],
-     "section": "LMS app",
+     "section": "Our apps",
      "default": [
       {
        "imageAppPane": "lms",
-       "image": "/assets/img/lms-portal.png",
+       "image": "/assets/img/examiner-02-dashboard-desktop.png",
        "imageAlt": "",
-       "imageWidth": "1410",
-       "imageHeight": "736",
+       "imageWidth": "1200",
+       "imageHeight": "797",
        "imageHidden": ""
       },
       {
@@ -2493,36 +2506,36 @@ const manifests = {
        "advanced": true
       }
      ],
-     "section": "LMS app",
+     "section": "Our apps",
      "default": [
       {
-       "image": "/assets/img/lms-app-home.svg",
-       "imageAlt": "App home screen with the next class, quick-access tiles and course progress",
-       "imageCap": "Home — next class, quick access and progress",
+       "image": "/assets/img/examiner-02-dashboard-mobile.png",
+       "imageAlt": "Examiner dashboard on mobile with user counts and pending approvals",
+       "imageCap": "Dashboard — users, active learners and pending approvals at a glance",
        "imageLoading": "eager"
       },
       {
-       "image": "/assets/img/lms-app-classes.svg",
-       "imageAlt": "Class schedule with live and upcoming sessions",
-       "imageCap": "Classes — live and upcoming sessions, one tap to join",
+       "image": "/assets/img/examiner-03-test-mobile.png",
+       "imageAlt": "Taking a test on mobile with the question palette",
+       "imageCap": "Take a test — question palette, bookmarks and live camera proctoring",
        "imageLoading": "lazy"
       },
       {
-       "image": "/assets/img/lms-app-courses.svg",
-       "imageAlt": "Course list with lessons and progress for each batch",
-       "imageCap": "Courses — lessons, notes and recordings per batch",
+       "image": "/assets/img/examiner-05-manage-test-mobile.png",
+       "imageAlt": "Managing a test on mobile",
+       "imageCap": "Manage tests — publish, enroll, preview, print and export",
        "imageLoading": "lazy"
       },
       {
-       "image": "/assets/img/lms-app-fees.svg",
-       "imageAlt": "Fee collection summary and recent payments",
-       "imageCap": "Fees — collections, dues and reminders handled for you",
+       "image": "/assets/img/examiner-04-settings-mobile.png",
+       "imageAlt": "Examiner settings on mobile",
+       "imageCap": "Your brand — app name, logo and favicon in one place",
        "imageLoading": "lazy"
       },
       {
-       "image": "/assets/img/lms-app-store.svg",
-       "imageAlt": "Your academy’s own branded app on the app store",
-       "imageCap": "Your brand — published on Google Play and the App Store",
+       "image": "/assets/img/examiner-01-login-mobile.png",
+       "imageAlt": "Examiner sign-in on mobile",
+       "imageCap": "Secure sign-in — captcha, OTP login and self sign-up",
        "imageLoading": "lazy"
       }
      ]
@@ -2531,57 +2544,57 @@ const manifests = {
      "key": "product.chip",
      "kind": "rich",
      "label": "Chip",
-     "section": "LMS app",
-     "default": "<span class=\"appx__live\"></span> Live class started <b>· Batch A</b>"
+     "section": "Our apps",
+     "default": "<span class=\"appx__live\"></span> Test in progress <b>· 20 candidates</b>"
     },
     {
      "key": "product.chip2",
      "kind": "rich",
      "label": "Chip 2",
-     "section": "LMS app",
-     "default": "<span class=\"appx__ok\">✓</span> Fee received <b>$240</b>"
+     "section": "Our apps",
+     "default": "<span class=\"appx__ok\">✓</span> Result published <b>92%</b>"
     },
     {
      "key": "product.chipText",
      "kind": "text",
      "label": "Chip Text",
-     "section": "LMS app",
-     "default": "Google Play · App Store"
+     "section": "Our apps",
+     "default": "Proctored · Desktop & mobile"
     },
     {
      "key": "product.chip3",
      "kind": "rich",
      "label": "Chip 3",
-     "section": "LMS app",
+     "section": "Our apps",
      "default": "<span class=\"appx__ok\">✓</span> Invoice paid <b>$1,240</b>"
     },
     {
      "key": "product.chip4",
      "kind": "rich",
      "label": "Chip 4",
-     "section": "LMS app",
+     "section": "Our apps",
      "default": "<span class=\"appx__ok\">✓</span> New profit <b>$2,992</b>"
     },
     {
      "key": "product.chipText2",
      "kind": "text",
      "label": "Chip Text 2",
-     "section": "LMS app",
+     "section": "Our apps",
      "default": "P&L updated live"
     },
     {
      "key": "product.count",
      "kind": "rich",
      "label": "Count",
-     "section": "LMS app",
+     "section": "Our apps",
      "default": "<b id=\"appNum\">01</b> / <span id=\"appTotal\">05</span>"
     },
     {
      "key": "product.cap",
      "kind": "text",
      "label": "Cap",
-     "section": "LMS app",
-     "default": "Home — next class, quick access and progress"
+     "section": "Our apps",
+     "default": "Dashboard — users, active learners and pending approvals at a glance"
     },
     {
      "key": "work.eyebrow",
@@ -3566,10 +3579,10 @@ const manifests = {
    "route": "/portfolio",
    "meta": {
     "title": "Portfolio | Web Development, App Development & Software Solutions",
-    "description": "Explore our portfolio of website development, mobile app development, software solutions, LMS platforms, and business applications delivered for clients worldwide.",
+    "description": "Explore our portfolio of website development, mobile app development, software solutions, online examination platforms, and business applications delivered for clients worldwide.",
     "openGraph": {
      "title": "Portfolio | Web Development, App Development & Software Solutions",
-     "description": "Explore our portfolio of website development, mobile app development, software solutions, LMS platforms, and business applications delivered for clients worldwide.",
+     "description": "Explore our portfolio of website development, mobile app development, software solutions, online examination platforms, and business applications delivered for clients worldwide.",
      "type": "website"
     }
    },
@@ -4314,11 +4327,11 @@ const manifests = {
    "title": "Products",
    "route": "/products",
    "meta": {
-    "title": "LMS & Accounting Software Solutions for Businesses & Educational Institutions | Inovexia",
-    "description": "Discover advanced LMS and Accounting Software solutions designed to streamline learning management, finance operations, reporting, payroll, and business growth.",
+    "title": "Examiner & Accounting Software Solutions for Businesses & Educational Institutions | Inovexia",
+    "description": "Discover Examiner online examination and Accounting Software solutions designed to streamline assessments, finance operations, reporting, payroll, and business growth.",
     "openGraph": {
-     "title": "LMS & Accounting Software Solutions for Businesses & Educational Institutions | Inovexia",
-     "description": "Discover advanced LMS and Accounting Software solutions designed to streamline learning management, finance operations, reporting, payroll, and business growth.",
+     "title": "Examiner & Accounting Software Solutions for Businesses & Educational Institutions | Inovexia",
+     "description": "Discover Examiner online examination and Accounting Software solutions designed to streamline assessments, finance operations, reporting, payroll, and business growth.",
      "type": "website"
     }
    },
@@ -4335,7 +4348,7 @@ const manifests = {
      "kind": "text",
      "label": "Title Line",
      "section": "Banner",
-     "default": "LMS & Accounting"
+     "default": "Examiner & Accounting"
     },
     {
      "key": "top.titleLine2",
@@ -4349,7 +4362,7 @@ const manifests = {
      "kind": "text",
      "label": "Lead",
      "section": "Banner",
-     "default": "Create engaging learning experiences and manage your finances with confidence — ready-to-use software, customised to your brand."
+     "default": "Run fair, secure online exams and manage your finances with confidence — ready-to-use software, customised to your brand."
     },
     {
      "key": "top.itemList",
@@ -6532,12 +6545,12 @@ const manifests = {
    "type": "product",
    "title": "Product page",
    "meta": {
-    "title": "LMS App Development Company | Custom Learning Management Systems | Inovexia",
-    "description": "Custom LMS app development for course management, learner tracking, automated assessments and certifications. Web and mobile learning platforms built to scale.",
+    "title": "Examiner — Online Examination Software | Proctored Tests & Question Banks | Inovexia",
+    "description": "Examiner is an online examination system with question banks, proctored tests, secure sign-in and instant results — on web and mobile, under your brand.",
     "robots": "index, follow",
     "openGraph": {
-     "title": "LMS App Development Company | Custom Learning Management Systems | Inovexia",
-     "description": "Custom LMS app development for course management, learner tracking, automated assessments and certifications. Web and mobile learning platforms built to scale.",
+     "title": "Examiner — Online Examination Software | Proctored Tests & Question Banks | Inovexia",
+     "description": "Examiner is an online examination system with question banks, proctored tests, secure sign-in and instant results — on web and mobile, under your brand.",
      "type": "website"
     }
    },
@@ -6547,28 +6560,28 @@ const manifests = {
      "kind": "rich",
      "label": "Crumb",
      "section": "Banner + screenshot",
-     "default": "<a href=\"/\">Home</a> <span aria-hidden=\"true\">/</span> <a href=\"/products\">Products</a> <span aria-hidden=\"true\">/</span> <span aria-current=\"page\">LMS App Development</span>"
+     "default": "<a href=\"/\">Home</a> <span aria-hidden=\"true\">/</span> <a href=\"/products\">Products</a> <span aria-hidden=\"true\">/</span> <span aria-current=\"page\">Examiner — Online Examination System</span>"
     },
     {
      "key": "top.titleLine",
      "kind": "text",
      "label": "Title Line",
      "section": "Banner + screenshot",
-     "default": "LMS App Development for"
+     "default": "Online Examination Software for"
     },
     {
      "key": "top.titleLine2",
      "kind": "text",
      "label": "Title Line 2",
      "section": "Banner + screenshot",
-     "default": "Modern Learning Organisations"
+     "default": "Schools, Institutes & Recruiters"
     },
     {
      "key": "top.lead",
      "kind": "text",
      "label": "Lead",
      "section": "Banner + screenshot",
-     "default": "We design and develop custom LMS applications tailored to your business needs. From UI/UX design and development to integrations, testing, deployment, and ongoing support, we provide end-to-end LMS development services."
+     "default": "Examiner lets you build question banks, schedule and proctor online tests, and publish results instantly — on the web and on mobile, under your own brand. We set it up, customise it and support it end to end."
     },
     {
      "key": "top.buttonText",
@@ -6582,14 +6595,14 @@ const manifests = {
      "kind": "image",
      "label": "Image",
      "section": "Banner + screenshot",
-     "default": "/assets/img/lms-dashboard.svg"
+     "default": "/assets/img/examiner-02-dashboard-desktop.png"
     },
     {
      "key": "top.imageAlt",
      "kind": "alt",
      "label": "Image Alt",
      "section": "Banner + screenshot",
-     "default": "Learning Management System dashboard showing course progress, learner activity and upcoming assessments"
+     "default": "Examiner admin dashboard with user counts, active learners and users pending approval"
     },
     {
      "key": "role.eyebrow",
@@ -6642,12 +6655,12 @@ const manifests = {
      "section": "Our role + key benefits",
      "default": [
       {
-       "text": "We design and develop custom LMS applications tailored to your business needs.",
+       "text": "We configure and customise Examiner around how you assess — your question formats, grading rules, roles and branding.",
        "textDelay": "2",
        "textMarginTop": "26px"
       },
       {
-       "text": "From UI/UX design and development to integrations, testing, deployment, and ongoing support, we provide end-to-end LMS development services.",
+       "text": "From set-up and data migration to integrations, training, hosting and ongoing support, we run the whole rollout so your first exam goes smoothly.",
        "textDelay": "3",
        "textMarginTop": "16px"
       }
@@ -6669,22 +6682,22 @@ const manifests = {
      "section": "Our role + key benefits",
      "default": [
       {
-       "benText": "Centralised course and learner management"
+       "benText": "Question banks by subject, topic and difficulty"
       },
       {
-       "benText": "Improved student engagement and retention"
+       "benText": "Timed tests with live camera proctoring"
       },
       {
-       "benText": "Real-time progress tracking and reporting"
+       "benText": "Captcha, OTP sign-in and approval of new users"
       },
       {
-       "benText": "Automated assessments and certifications"
+       "benText": "Instant scoring, attempts and result reports"
       },
       {
-       "benText": "Mobile-friendly learning experience"
+       "benText": "Works on desktop, tablet and mobile"
       },
       {
-       "benText": "Scalable solution for growing organisations"
+       "benText": "Your own name, logo and favicon"
       }
      ]
     },
@@ -6700,14 +6713,14 @@ const manifests = {
      "kind": "text",
      "label": "Title Line",
      "section": "Benefits",
-     "default": "Benefits of LMS"
+     "default": "Benefits of"
     },
     {
      "key": "benefits.titleLine2",
      "kind": "text",
      "label": "Title Line 2",
      "section": "Benefits",
-     "default": "app development"
+     "default": "online examinations"
     },
     {
      "key": "benefits.cardList",
@@ -6737,34 +6750,34 @@ const manifests = {
      "section": "Benefits",
      "default": [
       {
-       "icon": "<path d=\"M4 5.2A1.7 1.7 0 0 1 5.7 3.5H10a2 2 0 0 1 2 2v13a1.7 1.7 0 0 0-1.7-1.7H4z\"/><path d=\"M20 5.2a1.7 1.7 0 0 0-1.7-1.7H14a2 2 0 0 0-2 2v13a1.7 1.7 0 0 1 1.7-1.7H20z\"/>",
-       "subheading": "Improve Learning Experience",
-       "text": "Create engaging and interactive learning journeys."
-      },
-      {
-       "icon": "<path d=\"M3.5 20.5h17\"/><rect x=\"5\" y=\"11\" width=\"3.6\" height=\"7\" rx=\"1.2\"/><rect x=\"10.2\" y=\"6.5\" width=\"3.6\" height=\"11.5\" rx=\"1.2\"/><rect x=\"15.4\" y=\"9\" width=\"3.6\" height=\"9\" rx=\"1.2\"/>",
-       "subheading": "Track Student Performance",
-       "text": "Monitor learner progress through detailed reports."
-      },
-      {
-       "icon": "<circle cx=\"12\" cy=\"9.4\" r=\"5.4\"/><path d=\"m9 14.2-1.4 6.4 4.4-2.4 4.4 2.4L15 14.2\"/>",
-       "subheading": "Manage Certifications",
-       "text": "Automate certificate generation and renewal."
-      },
-      {
-       "icon": "<circle cx=\"12\" cy=\"12\" r=\"8.6\"/><path d=\"M3.4 12h17.2\"/><path d=\"M12 3.4a13 13 0 0 1 0 17.2a13 13 0 0 1 0-17.2z\"/>",
-       "subheading": "Learn Anywhere",
-       "text": "Support mobile and web-based learning."
-      },
-      {
-       "icon": "<path d=\"M13.4 2.6 4.8 13.4h6L9.8 21.4l8.8-11h-6.2z\"/>",
-       "subheading": "Automate Training Processes",
-       "text": "Reduce manual administration and operational costs."
+       "icon": "<path d=\"M8.5 4.5H6.8A1.8 1.8 0 0 0 5 6.3v12.4a1.8 1.8 0 0 0 1.8 1.8h10.4a1.8 1.8 0 0 0 1.8-1.8V6.3a1.8 1.8 0 0 0-1.8-1.8h-1.7\"/><rect x=\"8.5\" y=\"2.8\" width=\"7\" height=\"3.4\" rx=\"1.2\"/><path d=\"m8.8 13.4 2 2 4-4.4\"/>",
+       "subheading": "Run Exams Anywhere",
+       "text": "Candidates sit tests from any device — no exam hall or paper needed."
       },
       {
        "icon": "<path d=\"M12 3.2 20 6.4v5.3c0 4.6-3.2 8-8 9.1-4.8-1.1-8-4.5-8-9.1V6.4z\"/><path d=\"m9 12 2.2 2.2L15.4 10\"/>",
-       "subheading": "Secure Learning Environment",
-       "text": "Protect educational data with advanced security measures."
+       "subheading": "Fair & Secure Tests",
+       "text": "Camera proctoring, question shuffling and secure sign-in reduce malpractice."
+      },
+      {
+       "icon": "<path d=\"M13.4 2.6 4.8 13.4h6L9.8 21.4l8.8-11h-6.2z\"/>",
+       "subheading": "Instant Results",
+       "text": "Objective questions are scored automatically the moment a test is submitted."
+      },
+      {
+       "icon": "<path d=\"M4 5.2A1.7 1.7 0 0 1 5.7 3.5H10a2 2 0 0 1 2 2v13a1.7 1.7 0 0 0-1.7-1.7H4z\"/><path d=\"M20 5.2a1.7 1.7 0 0 0-1.7-1.7H14a2 2 0 0 0-2 2v13a1.7 1.7 0 0 1 1.7-1.7H20z\"/>",
+       "subheading": "Reusable Question Banks",
+       "text": "Build once, then assemble new tests in minutes from your own bank."
+      },
+      {
+       "icon": "<path d=\"M3.5 20.5h17\"/><rect x=\"5\" y=\"11\" width=\"3.6\" height=\"7\" rx=\"1.2\"/><rect x=\"10.2\" y=\"6.5\" width=\"3.6\" height=\"11.5\" rx=\"1.2\"/><rect x=\"15.4\" y=\"9\" width=\"3.6\" height=\"9\" rx=\"1.2\"/>",
+       "subheading": "Performance Insights",
+       "text": "Track scores, attempts and weak topics per candidate and per batch."
+      },
+      {
+       "icon": "<circle cx=\"12\" cy=\"12\" r=\"8.6\"/><path d=\"M3.4 12h17.2\"/><path d=\"M12 3.4a13 13 0 0 1 0 17.2a13 13 0 0 1 0-17.2z\"/>",
+       "subheading": "Your Own Brand",
+       "text": "Your name, logo and favicon across the whole candidate experience."
       }
      ]
     },
@@ -6818,24 +6831,24 @@ const manifests = {
      "section": "FAQ",
      "default": [
       {
-       "text": "What is LMS App Development?",
-       "blockLabel": "What is LMS App Development?",
-       "text2": "LMS app development involves creating software that enables organizations to manage, deliver, and track online learning and training programs."
+       "text": "What is Examiner?",
+       "blockLabel": "What is Examiner?",
+       "text2": "Examiner is an online examination system for creating, scheduling, proctoring and grading tests, with separate roles for admins, instructors and learners."
       },
       {
-       "text": "How much does LMS development cost?",
-       "blockLabel": "How much does LMS development cost?",
-       "text2": "The cost depends on features, integrations, user capacity, and platform requirements."
+       "text": "Can candidates take tests on mobile?",
+       "blockLabel": "Can candidates take tests on mobile?",
+       "text2": "Yes. Examiner is fully responsive, so tests work on desktops, tablets and phones."
       },
       {
-       "text": "Can you develop a mobile LMS application?",
-       "blockLabel": "Can you develop a mobile LMS application?",
-       "text2": "Yes, we develop LMS applications for Android, iOS, and web platforms."
+       "text": "How does proctoring work?",
+       "blockLabel": "How does proctoring work?",
+       "text2": "During a test the candidate's camera feed and connection status are monitored, and answers can be marked for review or left unattended before submitting."
       },
       {
-       "text": "Do you provide LMS maintenance services?",
-       "blockLabel": "Do you provide LMS maintenance services?",
-       "text2": "Yes, we offer ongoing support, updates, and performance optimization."
+       "text": "Can Examiner carry our branding?",
+       "blockLabel": "Can Examiner carry our branding?",
+       "text2": "Yes. You can set the app name, logo and favicon from Settings, and we can customise it further for you."
       }
      ]
     },
@@ -6851,7 +6864,7 @@ const manifests = {
      "kind": "text",
      "label": "Heading",
      "section": "CTA",
-     "default": "Not sure if our LMS fits your academy?"
+     "default": "Planning online exams for your institute?"
     },
     {
      "key": "start.text",
@@ -9901,11 +9914,11 @@ const manifests = {
     }
    ],
    "default": {
-    "sectionId": "lms",
-    "eyebrow": "Product 01 — Education",
-    "titleLine": "Learning Management",
-    "titleLine2": "System (LMS)",
-    "sub": "Empower educators, trainers and organisations with one platform for courses, students, assessments and performance tracking — plus your own branded app.",
+    "sectionId": "examiner",
+    "eyebrow": "Product 01 — Assessment",
+    "titleLine": "Online Examination",
+    "titleLine2": "System (Examiner)",
+    "sub": "Create, schedule and proctor online tests for schools, institutes and recruiters — question banks, secure sign-in, live camera monitoring and instant results, all under your own brand.",
     "subheading": "Technology Stack",
     "itemList": [
      {
@@ -9927,84 +9940,84 @@ const manifests = {
       "item": "Flutter Mobile App"
      }
     ],
-    "buttonLink": "/product/lms",
-    "buttonText": "Explore LMS Software",
-    "visLabel": "LMS web and app screens",
-    "text": "lms.youracademy.com/admin",
-    "image": "/assets/img/lms-portal.png",
-    "imageAlt": "LMS admin dashboard: user counts, active learners and their ongoing tests, and pending and recent registrations",
-    "imageUrl": "lms.youracademy.com/admin",
-    "imageWidth": "1410",
-    "imageHeight": "736",
+    "buttonLink": "/product/examiner",
+    "buttonText": "Explore Examiner Software",
+    "visLabel": "Examiner web and mobile screens",
+    "text": "exam.youracademy.com/dashboard",
+    "image": "/assets/img/examiner-02-dashboard-desktop.png",
+    "imageAlt": "Examiner admin dashboard: user counts, active learners and users pending approval",
+    "imageUrl": "exam.youracademy.com/dashboard",
+    "imageWidth": "1200",
+    "imageHeight": "797",
     "pdWslideList": [
      {
-      "image": "/assets/img/lms-web-classes.svg",
-      "imageAlt": "LMS web class schedule with live and upcoming classes",
-      "imageUrl": "lms.youracademy.com/classes"
+      "image": "/assets/img/examiner-03-test-desktop.png",
+      "imageAlt": "Examiner test screen with question palette, bookmark and camera proctoring",
+      "imageUrl": "exam.youracademy.com/test"
      },
      {
-      "image": "/assets/img/lms-web-courses.svg",
-      "imageAlt": "LMS web course library with completion progress",
-      "imageUrl": "lms.youracademy.com/courses"
+      "image": "/assets/img/examiner-05-manage-test-desktop.png",
+      "imageAlt": "Examiner manage test page: publish, enrollments, preview, print, export and attempts",
+      "imageUrl": "exam.youracademy.com/tests/manage"
      },
      {
-      "image": "/assets/img/lms-web-fees.svg",
-      "imageAlt": "LMS web fee collection with monthly totals and recent payments",
-      "imageUrl": "lms.youracademy.com/fees"
+      "image": "/assets/img/examiner-04-settings-desktop.png",
+      "imageAlt": "Examiner general settings: app name, logo and favicon",
+      "imageUrl": "exam.youracademy.com/settings"
      },
      {
-      "image": "/assets/img/lms-web-branding.svg",
-      "imageAlt": "LMS app branding settings with store publishing and an app preview",
-      "imageUrl": "lms.youracademy.com/branding"
+      "image": "/assets/img/examiner-01-login-desktop.png",
+      "imageAlt": "Examiner sign-in with captcha and OTP login",
+      "imageUrl": "exam.youracademy.com/login"
      }
     ],
-    "image2": "/assets/img/lms-app-home.svg",
-    "imageAlt2": "App home screen with the next class, quick-access tiles and course progress",
-    "imageCap": "Dashboard — the admin overview on the web, the home screen in the app",
+    "image2": "/assets/img/examiner-02-dashboard-mobile.png",
+    "imageAlt2": "Examiner dashboard on mobile with user counts and pending approvals",
+    "imageCap": "Dashboard — users, active learners and pending approvals at a glance",
     "pdSlideList": [
      {
-      "image": "/assets/img/lms-app-classes.svg",
-      "imageAlt": "Class schedule with live and upcoming sessions",
-      "imageCap": "Classes — the schedule on the web, one-tap join in the app"
+      "image": "/assets/img/examiner-03-test-mobile.png",
+      "imageAlt": "Taking a test on mobile with the question palette",
+      "imageCap": "Take a test — question palette, bookmarks and live camera proctoring"
      },
      {
-      "image": "/assets/img/lms-app-courses.svg",
-      "imageAlt": "Course list with lessons and progress for each batch",
-      "imageCap": "Courses — lessons and progress for every batch"
+      "image": "/assets/img/examiner-05-manage-test-mobile.png",
+      "imageAlt": "Managing a test on mobile",
+      "imageCap": "Manage tests — publish, enroll, preview, print and export"
      },
      {
-      "image": "/assets/img/lms-app-fees.svg",
-      "imageAlt": "Fee collection summary and recent payments",
-      "imageCap": "Fees — collections, dues and automatic reminders"
+      "image": "/assets/img/examiner-04-settings-mobile.png",
+      "imageAlt": "Examiner settings on mobile",
+      "imageCap": "Your brand — app name, logo and favicon in one place"
      },
      {
-      "image": "/assets/img/lms-app-store.svg",
-      "imageAlt": "Your academy's own branded app on the app store",
-      "imageCap": "Your brand — your name, logo and colours, live on both stores"
+      "image": "/assets/img/examiner-01-login-mobile.png",
+      "imageAlt": "Examiner sign-in on mobile",
+      "imageCap": "Secure sign-in — captcha, OTP login and self sign-up"
      }
     ],
-    "chip": "<span class=\"pd__live\"></span> <b>20</b> active learners",
-    "cap": "Dashboard — the admin overview on the web, the home screen in the app",
+    "chip": "<span class=\"pd__live\"></span> <b>20</b> candidates online",
+    "cap": "Dashboard — users, active learners and pending approvals at a glance",
     "featureList": [
      {
       "icon": "<path d=\"M4 5.2A1.7 1.7 0 0 1 5.7 3.5H10a2 2 0 0 1 2 2v13a1.7 1.7 0 0 0-1.7-1.7H4z\"/><path d=\"M20 5.2a1.7 1.7 0 0 0-1.7-1.7H14a2 2 0 0 0-2 2v13a1.7 1.7 0 0 1 1.7-1.7H20z\"/>",
-      "subheading": "Course Management",
-      "text": "Create, organize, and deliver online courses efficiently."
+      "subheading": "Question Bank",
+      "text": "Build reusable question banks by subject, topic and difficulty."
      },
      {
       "icon": "<circle cx=\"9\" cy=\"8.2\" r=\"3.4\"/><path d=\"M3.2 19.5a5.8 5.8 0 0 1 11.6 0\"/><path d=\"M16.2 5.2a3.2 3.2 0 0 1 0 6\"/><path d=\"M17.4 14.4a5.6 5.6 0 0 1 3.4 5.1\"/>",
-      "subheading": "Student Management",
-      "text": "Manage learner profiles, attendance, and progress tracking."
+      "subheading": "Candidate Management",
+      "text": "Invite, approve and enroll learners, instructors and admins."
      },
      {
       "icon": "<path d=\"M8.5 4.5H6.8A1.8 1.8 0 0 0 5 6.3v12.4a1.8 1.8 0 0 0 1.8 1.8h10.4a1.8 1.8 0 0 0 1.8-1.8V6.3a1.8 1.8 0 0 0-1.8-1.8h-1.7\"/><rect x=\"8.5\" y=\"2.8\" width=\"7\" height=\"3.4\" rx=\"1.2\"/><path d=\"m8.8 13.4 2 2 4-4.4\"/>",
-      "subheading": "Online Assessments",
-      "text": "Conduct quizzes, tests, assignments, and certifications."
+      "subheading": "Proctored Online Tests",
+      "text": "Timed tests with camera monitoring, review marks and auto-submit."
      },
      {
       "icon": "<path d=\"M3.5 20.5h17\"/><rect x=\"5\" y=\"11\" width=\"3.6\" height=\"7\" rx=\"1.2\"/><rect x=\"10.2\" y=\"6.5\" width=\"3.6\" height=\"11.5\" rx=\"1.2\"/><rect x=\"15.4\" y=\"9\" width=\"3.6\" height=\"9\" rx=\"1.2\"/>",
-      "subheading": "Reporting & Analytics",
-      "text": "Monitor performance with real-time reports and dashboards."
+      "subheading": "Results & Analytics",
+      "text": "Instant scoring, attempt history and performance reports."
      }
     ]
    }

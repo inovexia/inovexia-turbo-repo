@@ -1,7 +1,7 @@
 // AUTO-GENERATED from INW_Variation_1/Light/index.html (inline script #1) by scripts/convert-html.mjs.
 // Delete this line to keep hand edits — the converter then leaves the file alone.
 export default function run() {
-  /* Our Apps: LMS / Accounting tabs. Self-contained. */
+  /* Our Apps: Examiner / Accounting tabs. Self-contained. */
   (function () {
     var sec = document.getElementById('product');
     var tabs = sec ? sec.querySelectorAll('.apptabs [data-app]') : [];

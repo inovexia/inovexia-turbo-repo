@@ -49,13 +49,16 @@ const MARK = 'AUTO-GENERATED';
 /* Design page name → URL. Renamed: product → /products, work →
    /case-studies, blog → /blogs. Single pages nest under a section:
    service-web-design → /service/web-design, work-tonezone →
-   /case-study/tonezone, product-lms → /product/lms, blog-x → /blog/x.
+   /case-study/tonezone, blog-x → /blog/x. product-lms is the Examiner
+   product's page (the LMS was renamed), so it lives at /product/examiner.
    next.config.mjs redirects the old URLs — keep it in step. */
 const RENAMED = { product: 'products', work: 'case-studies', blog: 'blogs' };
 const SECTION = { service: 'service', work: 'case-study', product: 'product', blog: 'blog' };
 const NESTED = /^(service|work|product|blog)-(.+)$/;
+const ALIAS = { 'product-lms': '/product/examiner' };
 export function routeFor(name) {
   if (name === 'index') return '/';
+  if (ALIAS[name]) return ALIAS[name];
   const m = NESTED.exec(name);
   if (m) return `/${SECTION[m[1]]}/${m[2]}`;
   return `/${RENAMED[name] || name}`;

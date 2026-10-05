@@ -8,12 +8,12 @@ import Footer from '@/components/site/Footer';
 
 
 export const META = {
-  "title": "LMS App Development Company | Custom Learning Management Systems | Inovexia",
-  "description": "Custom LMS app development for course management, learner tracking, automated assessments and certifications. Web and mobile learning platforms built to scale.",
+  "title": "Examiner — Online Examination Software | Proctored Tests & Question Banks | Inovexia",
+  "description": "Examiner is an online examination system with question banks, proctored tests, secure sign-in and instant results — on web and mobile, under your brand.",
   "robots": "index, follow",
   "openGraph": {
-    "title": "LMS App Development Company | Custom Learning Management Systems | Inovexia",
-    "description": "Custom LMS app development for course management, learner tracking, automated assessments and certifications. Web and mobile learning platforms built to scale.",
+    "title": "Examiner — Online Examination Software | Proctored Tests & Question Banks | Inovexia",
+    "description": "Examiner is an online examination system with question banks, proctored tests, secure sign-in and instant results — on web and mobile, under your brand.",
     "type": "website"
   }
 };
@@ -59,7 +59,7 @@ export default function ProductLmsTemplate({ c }) {
               </div>{" "}
               <div className="shotwrap reveal reveal--right" data-delay="2">
                 <div className="shotframe">
-                  <img src={c.a("top.image")} alt={c.a("top.imageAlt")} width="880" height="560" loading="eager" decoding="async" />
+                  <img src={c.a("top.image")} alt={c.a("top.imageAlt")} width="1200" height="797" loading="eager" decoding="async" />
                 </div>
               </div>
             </div>
@@ -149,12 +149,12 @@ export default function ProductLmsTemplate({ c }) {
                   {i > 0 && " "}
                   <div className="faq__item reveal">
                     <h3 className="faq__h">
-                      <button className="faq__q" type="button" aria-expanded="false" aria-controls={"lms-a" + String(i + 1)}>
+                      <button className="faq__q" type="button" aria-expanded="false" aria-controls={"exam-a" + String(i + 1)}>
                         <span>{it.t("text")}</span>{" "}
                         <span className="faq__ico" aria-hidden="true" />
                       </button>
                     </h3>{" "}
-                    <div className="faq__a" id={"lms-a" + String(i + 1)} role="region" aria-label={it.a("blockLabel")}>
+                    <div className="faq__a" id={"exam-a" + String(i + 1)} role="region" aria-label={it.a("blockLabel")}>
                       <div className="faq__a-in">
                         <p>{it.t("text2")}</p>
                       </div>

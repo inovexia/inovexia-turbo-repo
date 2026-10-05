@@ -172,10 +172,11 @@ export function extractSeed({ parsed, manifests, rewriteUrl }) {
   const prodSecs = findAll(prodDoc, (n) => n.name === 'section' && hasClass(n, 'prod-sec'));
   prodSecs.forEach((sec, i) => {
     const lines = findAll(sec, (n) => hasClass(n, 'm__i')).map(textContent);
-    const isLms = sec.attribs.id === 'lms';
+    // Examiner (formerly the LMS) is the product with its own page.
+    const isLms = sec.attribs.id === 'examiner';
     entries.push({
       type: 'product',
-      slug: isLms ? 'lms' : slugify(sec.attribs.id || lines.join(' ')),
+      slug: isLms ? 'examiner' : slugify(sec.attribs.id || lines.join(' ')),
       template: isLms ? 'product-lms' : null,
       title: lines.join(' '),
       published: true,

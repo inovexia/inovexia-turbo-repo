@@ -10,10 +10,10 @@ import { loadPage, pageMetadata } from '@/lib/cms/content';
 
 const META = {
   "title": "Portfolio | Web Development, App Development & Software Solutions",
-  "description": "Explore our portfolio of website development, mobile app development, software solutions, LMS platforms, and business applications delivered for clients worldwide.",
+  "description": "Explore our portfolio of website development, mobile app development, software solutions, online examination platforms, and business applications delivered for clients worldwide.",
   "openGraph": {
     "title": "Portfolio | Web Development, App Development & Software Solutions",
-    "description": "Explore our portfolio of website development, mobile app development, software solutions, LMS platforms, and business applications delivered for clients worldwide.",
+    "description": "Explore our portfolio of website development, mobile app development, software solutions, online examination platforms, and business applications delivered for clients worldwide.",
     "type": "website"
   }
 };
