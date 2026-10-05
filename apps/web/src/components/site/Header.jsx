@@ -12,7 +12,7 @@ export default async function Header({ current = null, currentValue = 'page' }) 
   return (
     <header className="header" id="header">
       <div className="container header__inner">
-        <a href={c.a("header.logoLink")} className="logo" aria-label="Inovexia home" {...ac("/")}>
+        <a href={c.a("header.logoLink")} className="logo" aria-label="Inovexia home" {...ac(c.a("header.logoLink"))}>
           {" "}
           <img className="logo__img logo__img--on-dark" src={c.a("header.image")} alt={c.a("header.imageAlt")} width="174" height="40" />{" "}
           <img className="logo__img logo__img--on-light" src={c.a("header.image2")} alt={c.a("header.imageAlt2")} width="174" height="40" />{" "}
@@ -23,7 +23,7 @@ export default async function Header({ current = null, currentValue = 'page' }) 
               <Fragment key={i}>
                 {i > 0 && " "}
                 <li>
-                  <a href={it.a("linkAddress")} className="nav__link" {...ac("/services")}>
+                  <a href={it.a("linkAddress")} className="nav__link" {...ac(it.a("linkAddress"))}>
                     <span className="nl" dangerouslySetInnerHTML={{ __html: it.h("nl") }} />
                   </a>
                 </li>
@@ -42,7 +42,7 @@ export default async function Header({ current = null, currentValue = 'page' }) 
               <path d="M20 14.2A8.2 8.2 0 1 1 9.8 4a6.6 6.6 0 0 0 10.2 10.2z" />
             </svg>
           </button>{" "}
-          <a href={c.a("header.buttonLink")} className="btn btn--primary btn--sm magnetic" {...ac("/get-in-touch")}>
+          <a href={c.a("header.buttonLink")} className="btn btn--primary btn--sm magnetic" {...ac(c.a("header.buttonLink"))}>
             {" "}
             <span>{c.t("header.buttonText")}</span>{" "}
             <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">

@@ -436,7 +436,10 @@ ${top.join('\n')}
     // aria-current is decided per page: every <a> asks ac(original href).
     attrHook: (el) => (el.name === 'a' && el.attribs.href ? [`{...ac(${jsStr(rewriteUrl(el.attribs.href))})}`] : []),
   });
-  const headerLines = renderElement(stripped, 2, headerCtx);
+  // A CMS-driven href (e.g. a nav list item) must ask ac() about its own
+  // value, not the design's first item, or every link reads as current.
+  const headerLines = renderElement(stripped, 2, headerCtx)
+    .map((l) => l.replace(/href=\{([^{}]+)\}(.*)\{\.\.\.ac\([^)]*\)\}/, 'href={$1}$2{...ac($1)}'));
   writeGenerated(path.join(COMP_DIR, 'Header.jsx'), `${banner(srcRel)}import { Fragment } from 'react';
 import { loadPage } from '@/lib/cms/content';
 

@@ -31,6 +31,8 @@ const nextConfig = {
     const go = (source, destination) => ({ source, destination, permanent: true });
     return [
       go('/index.html', '/'),
+      // the LMS product was renamed Examiner
+      ...['/product/lms', '/product-lms', '/product-lms.html'].map((s) => go(s, '/product/examiner')),
       ...Object.entries(renamed).flatMap(([old, now]) => [go(`/${old}`, now), go(`/${old}.html`, now)]),
       go('/work/:slug', '/case-study/:slug'),
       ...Object.entries(section).flatMap(([prefix, s]) => [
