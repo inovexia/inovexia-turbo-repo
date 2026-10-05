@@ -1,0 +1,8 @@
+# Website (@inovexia/web). In the Netlify UI set Base directory to empty
+# (repo root) and Package directory to apps/web; paths below are from the root.
+[build]
+  command = "pnpm turbo run build --filter=@inovexia/web"
+  publish = "apps/web/.next"
+
+[build.environment]
+  NODE_VERSION = "22"

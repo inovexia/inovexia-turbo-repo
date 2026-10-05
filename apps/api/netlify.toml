@@ -1,0 +1,8 @@
+# API (@inovexia/api). In the Netlify UI set Base directory to empty
+# (repo root) and Package directory to apps/api; paths below are from the root.
+[build]
+  command = "pnpm turbo run build --filter=@inovexia/api"
+  publish = "apps/api/.next"
+
+[build.environment]
+  NODE_VERSION = "22"
