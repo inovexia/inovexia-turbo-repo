@@ -21,7 +21,8 @@
     "MAIL_FROM",
     "NOTIFY_TO",
     "REVALIDATE_SECRET",
-    "WEB_URL"
+    "WEB_URL",
+    "NETLIFY"
   ],
   "tasks": {
     "db:generate": {
