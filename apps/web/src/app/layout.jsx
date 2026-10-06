@@ -24,17 +24,24 @@ export default function RootLayout({ children }) {
   return (
     // data-theme and body's page class are set by inline scripts before
     // hydration, so React is told not to compare those two elements.
+    //
+    // <head> holds only tags React hoists (meta, preconnect, the fonts as a
+    // `precedence` stylesheet), none of which it hydrates. Netlify inserts a
+    // comment into <head> on the way out; anything React had to hydrate there
+    // would mismatch it (React error #418). So the theme script is the first
+    // thing in <body> instead, still ahead of any content, so no flash.
     <html lang="en" data-theme="light" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
           href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
           rel="stylesheet"
+          precedence="fonts"
         />
       </head>
       <body suppressHydrationWarning>
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
         {children}
         <SiteRuntime />
       </body>
