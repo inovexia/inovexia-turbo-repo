@@ -3,10 +3,6 @@
 
    pnpm admin:create                       asks for email, name and password
    pnpm admin:create -- --email a@b.com --name "A B" --password "…"
-   pnpm admin:create -- --sql              prints SQL to run in phpMyAdmin
-                                           instead of connecting (for a
-                                           database that only accepts local
-                                           connections)
 
    Re-running it for an existing email resets that admin's password and
    signs them out everywhere. */
@@ -40,8 +36,7 @@ if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email)) {
   console.error('That is not a valid email address.');
   process.exit(1);
 }
-const sqlOnly = process.argv.includes('--sql');
-const existing = sqlOnly ? null : await prisma.user.findUnique({ where: { email } });
+const existing = await prisma.user.findUnique({ where: { email } });
 const name = arg('name') || existing?.name || (await ask('Name: ')) || email.split('@')[0];
 
 let password = arg('password');
@@ -59,18 +54,7 @@ if (password.length < MIN_PASSWORD_LENGTH) {
 }
 
 const passwordHash = await hashPassword(password);
-if (sqlOnly) {
-  // Same effect as below: create the admin, or reset the password (and end
-  // the sessions) of an existing one.
-  const q = (s) => `'${String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'")}'`;
-  console.log(`
--- Run in phpMyAdmin → database → SQL
-INSERT INTO \`users\` (\`email\`, \`name\`, \`passwordHash\`, \`updatedAt\`)
-VALUES (${q(email)}, ${q(name)}, ${q(passwordHash)}, NOW(3))
-ON DUPLICATE KEY UPDATE \`passwordHash\` = VALUES(\`passwordHash\`), \`updatedAt\` = NOW(3);
-DELETE s FROM \`sessions\` s JOIN \`users\` u ON u.\`id\` = s.\`userId\` WHERE u.\`email\` = ${q(email)};
-`);
-} else if (existing) {
+if (existing) {
   await prisma.user.update({ where: { id: existing.id }, data: { passwordHash } });
   await prisma.session.deleteMany({ where: { userId: existing.id } });
   console.log(`Password reset for ${email}.`);

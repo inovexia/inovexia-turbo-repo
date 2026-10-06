@@ -2,9 +2,7 @@
 // Apply with `pnpm db:push` (or import prisma/sql/schema.sql in phpMyAdmin).
 
 generator client {
-  provider      = "prisma-client-js"
-  // "native" for this machine; rhel-openssl-3.0.x for Netlify/AWS Lambda functions
-  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+  provider = "prisma-client-js"
 }
 
 datasource db {
