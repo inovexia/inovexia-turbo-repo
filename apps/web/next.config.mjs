@@ -13,12 +13,13 @@ if (fs.existsSync(envFile)) process.loadEnvFile(envFile);
 const API_URL = (process.env.API_URL || 'http://localhost:4000').replace(/\/$/, '');
 
 // The /api proxy target is fixed at build time. On a Netlify build, a missing
-// or localhost API_URL would make every form and the admin answer a bare 500,
-// so stop the deploy here with the reason instead.
+// or localhost API_URL makes every form and the admin answer a bare 500. The
+// public pages still work, so the build goes on, but says why in the log.
 if (process.env.NETLIFY && /^https?:\/\/(localhost|127\.0\.0\.1)\b/.test(API_URL)) {
-  throw new Error(
-    `API_URL is "${API_URL}" — set it in Netlify (Site configuration → Environment variables) ` +
-      'to the deployed API site, e.g. https://your-api.netlify.app, then redeploy.',
+  console.warn(
+    `\n⚠ API_URL is "${API_URL}": forms and /admin will fail (500) on this deploy. ` +
+      'Set API_URL in Netlify (Site configuration → Environment variables) to the deployed ' +
+      'API site, e.g. https://your-api.netlify.app, then redeploy.\n',
   );
 }
 
