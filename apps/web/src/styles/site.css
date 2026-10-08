@@ -5166,6 +5166,10 @@ body.page-home {
 
 /* Portfolio fixes: header links never squeeze; row numbers sit in the bottom corner */
 .section__head--row > .btn--text { flex: none; }
+/* A text link beside a heading block sits on the subtitle's last line, not the padded box bottom */
+@media (min-width: 901px) {
+  .section__head--row:has(> .btn--text) { align-items: last baseline; }
+}
 .pfp__n { top: auto; bottom: clamp(10px, 1.6vw, 20px); font-size: clamp(3.4rem, 6vw, 5.5rem); }
 
 @media (max-width: 960px) { .pfp__n { display: none; } }
