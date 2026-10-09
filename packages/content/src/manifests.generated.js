@@ -2360,7 +2360,7 @@ const manifests = {
          "appfText": "Payroll, deductions and approvals in one run"
         }
        ],
-       "actions": "<a href=\"/products#accounting\" class=\"btn btn--text\">Explore Accounting Software →</a>"
+       "actions": "<a href=\"/product/accounting\" class=\"btn btn--text\">Explore Accounting Software →</a>"
       }
      ]
     },

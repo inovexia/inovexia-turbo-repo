@@ -8,7 +8,8 @@
                           (asks for confirmation)
    pnpm db:seed -- --add-missing-pages
                           gives entries that have no page of their own the
-                          seed's page (e.g. the starter service pages);
+                          seed's page (e.g. the starter service pages), and
+                          points a placeholder "#" section button at it;
                           entries that already have a page are not touched */
 import readline from 'node:readline';
 import { prisma } from '@inovexia/database';
@@ -31,7 +32,13 @@ if (process.argv.includes('--add-missing-pages')) {
   for (const s of seedEntries.filter((e) => e.template && e.page)) {
     const row = await prisma.entry.findUnique({ where: { type_slug: { type: s.type, slug: s.slug } } });
     if (!row || row.template) continue;
-    await prisma.entry.update({ where: { id: row.id }, data: { template: s.template, page: s.page, seo: s.seo ?? undefined } });
+    // A section button that was only a placeholder ("#" or empty) now has a
+    // page to point at; a link an editor set is kept.
+    const link = row.section?.buttonLink;
+    const section = row.section && s.section?.buttonLink && (!link || link === '#')
+      ? { ...row.section, buttonLink: s.section.buttonLink }
+      : undefined;
+    await prisma.entry.update({ where: { id: row.id }, data: { template: s.template, page: s.page, seo: s.seo ?? undefined, section } });
     console.log(`${s.type} "${row.title}": page added (${s.template})`);
   }
   await prisma.$disconnect();

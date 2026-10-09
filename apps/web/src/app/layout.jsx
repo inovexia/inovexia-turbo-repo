@@ -20,12 +20,20 @@ export const viewport = {
    header toggle stores an explicit choice under the same key main.js uses. */
 const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem('inovexia-theme')==='dark'?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`;
 
+/* Netlify injects an HTML comment (plus a newline) into <head> after the
+   page is rendered. React can't match it during hydration (error #418), so
+   it re-renders the whole document and every listener main.js attached is
+   lost — the app tabs stop responding. React renders no comments or bare
+   text into <head>, so dropping them before hydration is safe. */
+const HEAD_CLEAN_SCRIPT = `(function(){var h=document.head,n=h.firstChild,x;while(n){x=n.nextSibling;if(n.nodeType===8||(n.nodeType===3&&!n.nodeValue.trim()))h.removeChild(n);n=x;}})();`;
+
 export default function RootLayout({ children }) {
   return (
     // data-theme and body's page class are set by inline scripts before
     // hydration, so React is told not to compare those two elements.
     <html lang="en" data-theme="light" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: HEAD_CLEAN_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
