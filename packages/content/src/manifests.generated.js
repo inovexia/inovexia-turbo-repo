@@ -6591,6 +6591,13 @@ const manifests = {
      "default": "Get Started"
     },
     {
+     "key": "top.buttonLink",
+     "kind": "link",
+     "label": "Button Link",
+     "section": "Banner + screenshot",
+     "default": "/get-in-touch"
+    },
+    {
      "key": "top.image",
      "kind": "image",
      "label": "Image",
@@ -7891,25 +7898,264 @@ const manifests = {
      "default": "Get in Touch"
     },
     {
-     "key": "top.text",
-     "kind": "text",
-     "label": "Text",
-     "section": "Banner + cover",
-     "default": "metrotrucktraining.com"
-    },
-    {
      "key": "top.image",
      "kind": "image",
      "label": "Image",
      "section": "Banner + cover",
-     "default": "/assets/img/work-metrotruck-home.png"
+     "default": "/assets/img/work-metrotruck-1.jpg"
     },
     {
      "key": "top.imageAlt",
      "kind": "alt",
      "label": "Image Alt",
      "section": "Banner + cover",
-     "default": "Metro Truck Driving School home page design"
+     "default": "Metro Truck desktop: home: award-winning truck driving school, with Find a Course and Apply Now"
+    },
+    {
+     "key": "top.pdWslideList",
+     "kind": "list",
+     "label": "Pd Wslide List",
+     "itemLabel": "Pd Wslide",
+     "item": [
+      {
+       "key": "image",
+       "kind": "image",
+       "label": "Image",
+       "path": "@src"
+      },
+      {
+       "key": "imageAlt",
+       "kind": "alt",
+       "label": "Image Alt",
+       "path": "@alt"
+      }
+     ],
+     "section": "Banner + cover",
+     "default": [
+      {
+       "image": "/assets/img/work-metrotruck-2.jpg",
+       "imageAlt": "Metro Truck desktop: why choose Metro, TTSAO membership and the intro video"
+      },
+      {
+       "image": "/assets/img/work-metrotruck-3.jpg",
+       "imageAlt": "Metro Truck desktop: courses and how to obtain an MTO commercial licence"
+      },
+      {
+       "image": "/assets/img/work-metrotruck-4.jpg",
+       "imageAlt": "Metro Truck desktop: Class A course overview"
+      },
+      {
+       "image": "/assets/img/work-metrotruck-5.jpg",
+       "imageAlt": "Metro Truck desktop: admissions and contact"
+      },
+      {
+       "image": "/assets/img/work-metrotruck-6.jpg",
+       "imageAlt": "Metro Truck desktop: Class D course overview"
+      }
+     ]
+    },
+    {
+     "key": "top.image2",
+     "kind": "image",
+     "label": "Image 2",
+     "section": "Banner + cover",
+     "default": "/assets/img/work-metrotruck-t1.jpg"
+    },
+    {
+     "key": "top.imageAlt2",
+     "kind": "alt",
+     "label": "Image Alt 2",
+     "section": "Banner + cover",
+     "default": ""
+    },
+    {
+     "key": "top.tzxSyncList",
+     "kind": "list",
+     "label": "Tzx Sync List",
+     "itemLabel": "Tzx Sync",
+     "item": [
+      {
+       "key": "image",
+       "kind": "image",
+       "label": "Image",
+       "path": "@src"
+      },
+      {
+       "key": "imageAlt",
+       "kind": "alt",
+       "label": "Image Alt",
+       "path": "@alt"
+      }
+     ],
+     "section": "Banner + cover",
+     "default": [
+      {
+       "image": "/assets/img/work-metrotruck-t2.jpg",
+       "imageAlt": ""
+      },
+      {
+       "image": "/assets/img/work-metrotruck-t3.jpg",
+       "imageAlt": ""
+      },
+      {
+       "image": "/assets/img/work-metrotruck-t4.jpg",
+       "imageAlt": ""
+      },
+      {
+       "image": "/assets/img/work-metrotruck-t5.jpg",
+       "imageAlt": ""
+      },
+      {
+       "image": "/assets/img/work-metrotruck-t6.jpg",
+       "imageAlt": ""
+      }
+     ]
+    },
+    {
+     "key": "top.image3",
+     "kind": "image",
+     "label": "Image 3",
+     "section": "Banner + cover",
+     "default": "/assets/img/work-metrotruck-1.jpg"
+    },
+    {
+     "key": "top.imageAlt3",
+     "kind": "alt",
+     "label": "Image Alt 3",
+     "section": "Banner + cover",
+     "default": ""
+    },
+    {
+     "key": "top.tzxSyncList2",
+     "kind": "list",
+     "label": "Tzx Sync List 2",
+     "itemLabel": "Tzx Sync",
+     "item": [
+      {
+       "key": "image",
+       "kind": "image",
+       "label": "Image",
+       "path": "@src"
+      },
+      {
+       "key": "imageAlt",
+       "kind": "alt",
+       "label": "Image Alt",
+       "path": "@alt"
+      }
+     ],
+     "section": "Banner + cover",
+     "default": [
+      {
+       "image": "/assets/img/work-metrotruck-2.jpg",
+       "imageAlt": ""
+      },
+      {
+       "image": "/assets/img/work-metrotruck-3.jpg",
+       "imageAlt": ""
+      },
+      {
+       "image": "/assets/img/work-metrotruck-4.jpg",
+       "imageAlt": ""
+      },
+      {
+       "image": "/assets/img/work-metrotruck-5.jpg",
+       "imageAlt": ""
+      },
+      {
+       "image": "/assets/img/work-metrotruck-6.jpg",
+       "imageAlt": ""
+      }
+     ]
+    },
+    {
+     "key": "top.image4",
+     "kind": "image",
+     "label": "Image 4",
+     "section": "Banner + cover",
+     "default": "/assets/img/work-metrotruck-m1.jpg"
+    },
+    {
+     "key": "top.imageAlt4",
+     "kind": "alt",
+     "label": "Image Alt 4",
+     "section": "Banner + cover",
+     "default": "Metro Truck mobile: home: award-winning truck driving school, with Find a Course and Apply Now"
+    },
+    {
+     "key": "top.imageCap",
+     "kind": "text",
+     "label": "Image Cap",
+     "section": "Banner + cover",
+     "default": "Home — the school's promise and both calls to action up front"
+    },
+    {
+     "key": "top.pdSlideList",
+     "kind": "list",
+     "label": "Pd Slide List",
+     "itemLabel": "Pd Slide",
+     "item": [
+      {
+       "key": "image",
+       "kind": "image",
+       "label": "Image",
+       "path": "@src"
+      },
+      {
+       "key": "imageAlt",
+       "kind": "alt",
+       "label": "Image Alt",
+       "path": "@alt"
+      },
+      {
+       "key": "imageCap",
+       "kind": "text",
+       "label": "Image Cap",
+       "path": "@data-cap"
+      }
+     ],
+     "section": "Banner + cover",
+     "default": [
+      {
+       "image": "/assets/img/work-metrotruck-m2.jpg",
+       "imageAlt": "Metro Truck mobile: why choose Metro and TTSAO membership",
+       "imageCap": "Why Metro — accreditation, TTSAO membership and the intro reel"
+      },
+      {
+       "image": "/assets/img/work-metrotruck-m3.jpg",
+       "imageAlt": "Metro Truck mobile: how to obtain an MTO commercial licence",
+       "imageCap": "Courses — how to get an MTO commercial licence, step by step"
+      },
+      {
+       "image": "/assets/img/work-metrotruck-m4.jpg",
+       "imageAlt": "Metro Truck mobile: Class A course overview",
+       "imageCap": "Class A — course overview with an eligibility check"
+      },
+      {
+       "image": "/assets/img/work-metrotruck-m5.jpg",
+       "imageAlt": "Metro Truck mobile: admissions and contact",
+       "imageCap": "Admissions — contact details and training coordinators"
+      },
+      {
+       "image": "/assets/img/work-metrotruck-m6.jpg",
+       "imageAlt": "Metro Truck mobile: Class D course overview",
+       "imageCap": "Class D — every licence class has its own course page"
+      }
+     ]
+    },
+    {
+     "key": "top.chip",
+     "kind": "rich",
+     "label": "Chip",
+     "section": "Banner + cover",
+     "default": "<span class=\"pd__live\"></span> Live at <b>metrotrucktraining.com</b>"
+    },
+    {
+     "key": "top.cap",
+     "kind": "text",
+     "label": "Cap",
+     "section": "Banner + cover",
+     "default": "Home — the school's promise and both calls to action up front"
     },
     {
      "key": "overview.eyebrow",
@@ -8891,13 +9137,6 @@ const manifests = {
      "default": "Get in Touch"
     },
     {
-     "key": "top.text",
-     "kind": "text",
-     "label": "Text",
-     "section": "Banner",
-     "default": "portal.yourcompany.com/dashboard"
-    },
-    {
      "key": "top.image",
      "kind": "image",
      "label": "Image",
@@ -8909,7 +9148,219 @@ const manifests = {
      "kind": "alt",
      "label": "Image Alt",
      "section": "Banner",
-     "default": "Accounting dashboard with profit and loss charts, net income and expense trends"
+     "default": "MSC Portal accounting dashboard: profit and loss charts, net income and expense trends, and a profit and loss statement"
+    },
+    {
+     "key": "top.pdWslideList",
+     "kind": "list",
+     "label": "Pd Wslide List",
+     "itemLabel": "Pd Wslide",
+     "item": [
+      {
+       "key": "image",
+       "kind": "image",
+       "label": "Image",
+       "path": "@src"
+      },
+      {
+       "key": "imageAlt",
+       "kind": "alt",
+       "label": "Image Alt",
+       "path": "@alt"
+      }
+     ],
+     "section": "Banner",
+     "default": [
+      {
+       "image": "/assets/img/acct-web-invoices.svg",
+       "imageAlt": "Accounting web invoices list with paid, due and overdue statuses"
+      },
+      {
+       "image": "/assets/img/acct-web-reports.svg",
+       "imageAlt": "Accounting web profit and loss statement and downloadable statements"
+      },
+      {
+       "image": "/assets/img/acct-web-payroll.svg",
+       "imageAlt": "Accounting web payroll with salaries and approval status"
+      }
+     ]
+    },
+    {
+     "key": "top.image2",
+     "kind": "image",
+     "label": "Image 2",
+     "section": "Banner",
+     "default": "/assets/img/acct-app.svg"
+    },
+    {
+     "key": "top.imageAlt2",
+     "kind": "alt",
+     "label": "Image Alt 2",
+     "section": "Banner",
+     "default": ""
+    },
+    {
+     "key": "top.tzxSyncList",
+     "kind": "list",
+     "label": "Tzx Sync List",
+     "itemLabel": "Tzx Sync",
+     "item": [
+      {
+       "key": "image",
+       "kind": "image",
+       "label": "Image",
+       "path": "@src"
+      },
+      {
+       "key": "imageAlt",
+       "kind": "alt",
+       "label": "Image Alt",
+       "path": "@alt"
+      }
+     ],
+     "section": "Banner",
+     "default": [
+      {
+       "image": "/assets/img/acct-app-invoices.svg",
+       "imageAlt": ""
+      },
+      {
+       "image": "/assets/img/acct-app-reports.svg",
+       "imageAlt": ""
+      },
+      {
+       "image": "/assets/img/acct-app-payroll.svg",
+       "imageAlt": ""
+      }
+     ]
+    },
+    {
+     "key": "top.image3",
+     "kind": "image",
+     "label": "Image 3",
+     "section": "Banner",
+     "default": "/assets/img/acct-portal.png"
+    },
+    {
+     "key": "top.imageAlt3",
+     "kind": "alt",
+     "label": "Image Alt 3",
+     "section": "Banner",
+     "default": ""
+    },
+    {
+     "key": "top.tzxSyncList2",
+     "kind": "list",
+     "label": "Tzx Sync List 2",
+     "itemLabel": "Tzx Sync",
+     "item": [
+      {
+       "key": "image",
+       "kind": "image",
+       "label": "Image",
+       "path": "@src"
+      },
+      {
+       "key": "imageAlt",
+       "kind": "alt",
+       "label": "Image Alt",
+       "path": "@alt"
+      }
+     ],
+     "section": "Banner",
+     "default": [
+      {
+       "image": "/assets/img/acct-web-invoices.svg",
+       "imageAlt": ""
+      },
+      {
+       "image": "/assets/img/acct-web-reports.svg",
+       "imageAlt": ""
+      },
+      {
+       "image": "/assets/img/acct-web-payroll.svg",
+       "imageAlt": ""
+      }
+     ]
+    },
+    {
+     "key": "top.image4",
+     "kind": "image",
+     "label": "Image 4",
+     "section": "Banner",
+     "default": "/assets/img/acct-app.svg"
+    },
+    {
+     "key": "top.imageAlt4",
+     "kind": "alt",
+     "label": "Image Alt 4",
+     "section": "Banner",
+     "default": "Accounting app overview: cash balance, income and expenses, and recent invoices"
+    },
+    {
+     "key": "top.imageCap",
+     "kind": "text",
+     "label": "Image Cap",
+     "section": "Banner",
+     "default": "Overview — the live MSC Portal dashboard, and the app overview"
+    },
+    {
+     "key": "top.pdSlideList",
+     "kind": "list",
+     "label": "Pd Slide List",
+     "itemLabel": "Pd Slide",
+     "item": [
+      {
+       "key": "image",
+       "kind": "image",
+       "label": "Image",
+       "path": "@src"
+      },
+      {
+       "key": "imageAlt",
+       "kind": "alt",
+       "label": "Image Alt",
+       "path": "@alt"
+      },
+      {
+       "key": "imageCap",
+       "kind": "text",
+       "label": "Image Cap",
+       "path": "@data-cap"
+      }
+     ],
+     "section": "Banner",
+     "default": [
+      {
+       "image": "/assets/img/acct-app-invoices.svg",
+       "imageAlt": "Invoices list with paid, due and overdue invoices",
+       "imageCap": "Invoices — sent, due, paid and overdue at a glance"
+      },
+      {
+       "image": "/assets/img/acct-app-reports.svg",
+       "imageAlt": "Quarterly profit and loss with downloadable statements",
+       "imageCap": "Reports — P&L, balance sheet, cash flow and tax, export-ready"
+      },
+      {
+       "image": "/assets/img/acct-app-payroll.svg",
+       "imageAlt": "Next payroll total and employee salaries with approval status",
+       "imageCap": "Payroll — salaries, deductions and approvals in one run"
+      }
+     ]
+    },
+    {
+     "key": "top.chip",
+     "kind": "rich",
+     "label": "Chip",
+     "section": "Banner",
+     "default": "<span class=\"pd__ok\">✓</span> New profit <b>$2,992</b>"
+    },
+    {
+     "key": "top.cap",
+     "kind": "text",
+     "label": "Cap",
+     "section": "Banner",
+     "default": "Overview — the live MSC Portal dashboard, and the app overview"
     },
     {
      "key": "overview.eyebrow",

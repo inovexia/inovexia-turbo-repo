@@ -1,5 +1,5 @@
-// AUTO-GENERATED from INW_Variation_1/Light/work-accounting.html by scripts/convert-html.mjs.
-// Delete this line to keep hand edits — the converter then leaves the file alone.
+// Generated from INW_Variation_1/Light/work-accounting.html, then hand-edited
+// (the banner is ToneZone's device slider), so the converter leaves it alone.
 import { Fragment } from 'react';
 import BodyClass from '@/components/site/BodyClass';
 import SiteTop from '@/components/site/SiteTop';
@@ -67,15 +67,85 @@ export default function WorkAccountingTemplate({ c }) {
                   </a>
                 </div>
               </div>{" "}
-              <div className="shotwrap reveal reveal--right" data-delay="2">
-                <div className="shotframe">
-                  <div className="pd__bar" aria-hidden="true">
-                    <i />
-                    <i />
-                    <i />
-                    <span>{c.t("top.text")}</span>
+              {/* The accounting portal and app on a desk setup: monitor, laptop, tablet and
+                 phone. Same slider as ToneZone.
+              */}
+              <div className="pd__vis pd-slider tzx reveal reveal--right" data-delay="2" role="group" aria-roledescription="carousel" aria-label="Accounting portal and app on monitor, laptop, tablet and phone">
+                <div className="tzx__stage">
+                  <div className="tzx__glow" aria-hidden="true" />{" "}
+                  <div className="tzx__desk" aria-hidden="true" />{" "}
+                  <div className="tzx__monitor">
+                    <div className="tzx__bezel">
+                      <div className="tzx__screen pd-wslides">
+                        <img className="pd-wslide is-active" src={c.a("top.image")} alt={c.a("top.imageAlt")} width="1200" height="750" loading="eager" decoding="async" />{" "}
+                        {c.l("top.pdWslideList").map((it, i) => (
+                          <Fragment key={i}>
+                            {i > 0 && " "}
+                            <img className="pd-wslide" src={it.a("image")} alt={it.a("imageAlt")} width="1200" height="750" loading="eager" decoding="async" aria-hidden="true" />
+                          </Fragment>
+                        ))}
+                      </div>
+                    </div>{" "}
+                    <div className="tzx__chin" aria-hidden="true" />{" "}
+                    <div className="tzx__neck" aria-hidden="true" />{" "}
+                    <div className="tzx__foot" aria-hidden="true" />
                   </div>{" "}
-                  <img src={c.a("top.image")} alt={c.a("top.imageAlt")} width="714" height="474" loading="eager" decoding="async" />
+                  <div className="tzx__tablet">
+                    <div className="tzx__screen">
+                      <img className="tzx-sync is-active" src={c.a("top.image2")} alt={c.a("top.imageAlt2")} width="615" height="772" loading="eager" decoding="async" aria-hidden="true" />{" "}
+                      {c.l("top.tzxSyncList").map((it, i) => (
+                        <Fragment key={i}>
+                          {i > 0 && " "}
+                          <img className="tzx-sync" src={it.a("image")} alt={it.a("imageAlt")} width="615" height="772" loading="eager" decoding="async" aria-hidden="true" />
+                        </Fragment>
+                      ))}
+                    </div>
+                  </div>{" "}
+                  <div className="tzx__laptop">
+                    <div className="tzx__lid">
+                      <div className="tzx__screen">
+                        <img className="tzx-sync is-active" src={c.a("top.image3")} alt={c.a("top.imageAlt3")} width="1200" height="750" loading="eager" decoding="async" aria-hidden="true" />{" "}
+                        {c.l("top.tzxSyncList2").map((it, i) => (
+                          <Fragment key={i}>
+                            {i > 0 && " "}
+                            <img className="tzx-sync" src={it.a("image")} alt={it.a("imageAlt")} width="1200" height="750" loading="eager" decoding="async" aria-hidden="true" />
+                          </Fragment>
+                        ))}
+                      </div>
+                    </div>{" "}
+                    <div className="tzx__deck" aria-hidden="true">
+                      <i />
+                    </div>
+                  </div>{" "}
+                  <div className="tzx__phone">
+                    <span className="tzx__notch" aria-hidden="true" />
+                    <div className="pd-slider__win">
+                      <div className="pd-slider__track">
+                        <img className="pd-slide is-active" src={c.a("top.image4")} alt={c.a("top.imageAlt4")} data-cap={c.t("top.imageCap")} width="540" height="1169" loading="eager" decoding="async" />{" "}
+                        {c.l("top.pdSlideList").map((it, i) => (
+                          <Fragment key={i}>
+                            {i > 0 && " "}
+                            <img className="pd-slide" src={it.a("image")} alt={it.a("imageAlt")} data-cap={it.t("imageCap")} width="540" height="1169" loading="eager" decoding="async" aria-hidden="true" />
+                          </Fragment>
+                        ))}
+                      </div>
+                    </div>
+                  </div>{" "}
+                  <div className="pd__chip tzx__chip" aria-hidden="true" dangerouslySetInnerHTML={{ __html: c.h("top.chip") }} />
+                </div>{" "}
+                <div className="pd-slider__foot">
+                  <button className="pd-slider__btn" type="button" data-step="-1" aria-label="Previous screen">
+                    <svg viewBox="0 0 20 20" width="15" height="15" aria-hidden="true">
+                      <path d="M12 4.5 6.5 10l5.5 5.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>{" "}
+                  <div className="pd-slider__dots" />{" "}
+                  <button className="pd-slider__btn" type="button" data-step="1" aria-label="Next screen">
+                    <svg viewBox="0 0 20 20" width="15" height="15" aria-hidden="true">
+                      <path d="m8 4.5 5.5 5.5L8 15.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>{" "}
+                  <p className="pd-slider__cap" aria-live="polite">{c.t("top.cap")}</p>
                 </div>
               </div>
             </div>

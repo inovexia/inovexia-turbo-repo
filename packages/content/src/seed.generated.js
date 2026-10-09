@@ -4937,9 +4937,110 @@ const entries = [
    ],
    "top.buttonLink": "/get-in-touch",
    "top.buttonText": "Get in Touch",
-   "top.text": "metrotrucktraining.com",
-   "top.image": "/assets/img/work-metrotruck-home.png",
-   "top.imageAlt": "Metro Truck Driving School home page design",
+   "top.image": "/assets/img/work-metrotruck-1.jpg",
+   "top.imageAlt": "Metro Truck desktop: home: award-winning truck driving school, with Find a Course and Apply Now",
+   "top.pdWslideList": [
+    {
+     "image": "/assets/img/work-metrotruck-2.jpg",
+     "imageAlt": "Metro Truck desktop: why choose Metro, TTSAO membership and the intro video"
+    },
+    {
+     "image": "/assets/img/work-metrotruck-3.jpg",
+     "imageAlt": "Metro Truck desktop: courses and how to obtain an MTO commercial licence"
+    },
+    {
+     "image": "/assets/img/work-metrotruck-4.jpg",
+     "imageAlt": "Metro Truck desktop: Class A course overview"
+    },
+    {
+     "image": "/assets/img/work-metrotruck-5.jpg",
+     "imageAlt": "Metro Truck desktop: admissions and contact"
+    },
+    {
+     "image": "/assets/img/work-metrotruck-6.jpg",
+     "imageAlt": "Metro Truck desktop: Class D course overview"
+    }
+   ],
+   "top.image2": "/assets/img/work-metrotruck-t1.jpg",
+   "top.imageAlt2": "",
+   "top.tzxSyncList": [
+    {
+     "image": "/assets/img/work-metrotruck-t2.jpg",
+     "imageAlt": ""
+    },
+    {
+     "image": "/assets/img/work-metrotruck-t3.jpg",
+     "imageAlt": ""
+    },
+    {
+     "image": "/assets/img/work-metrotruck-t4.jpg",
+     "imageAlt": ""
+    },
+    {
+     "image": "/assets/img/work-metrotruck-t5.jpg",
+     "imageAlt": ""
+    },
+    {
+     "image": "/assets/img/work-metrotruck-t6.jpg",
+     "imageAlt": ""
+    }
+   ],
+   "top.image3": "/assets/img/work-metrotruck-1.jpg",
+   "top.imageAlt3": "",
+   "top.tzxSyncList2": [
+    {
+     "image": "/assets/img/work-metrotruck-2.jpg",
+     "imageAlt": ""
+    },
+    {
+     "image": "/assets/img/work-metrotruck-3.jpg",
+     "imageAlt": ""
+    },
+    {
+     "image": "/assets/img/work-metrotruck-4.jpg",
+     "imageAlt": ""
+    },
+    {
+     "image": "/assets/img/work-metrotruck-5.jpg",
+     "imageAlt": ""
+    },
+    {
+     "image": "/assets/img/work-metrotruck-6.jpg",
+     "imageAlt": ""
+    }
+   ],
+   "top.image4": "/assets/img/work-metrotruck-m1.jpg",
+   "top.imageAlt4": "Metro Truck mobile: home: award-winning truck driving school, with Find a Course and Apply Now",
+   "top.imageCap": "Home — the school's promise and both calls to action up front",
+   "top.pdSlideList": [
+    {
+     "image": "/assets/img/work-metrotruck-m2.jpg",
+     "imageAlt": "Metro Truck mobile: why choose Metro and TTSAO membership",
+     "imageCap": "Why Metro — accreditation, TTSAO membership and the intro reel"
+    },
+    {
+     "image": "/assets/img/work-metrotruck-m3.jpg",
+     "imageAlt": "Metro Truck mobile: how to obtain an MTO commercial licence",
+     "imageCap": "Courses — how to get an MTO commercial licence, step by step"
+    },
+    {
+     "image": "/assets/img/work-metrotruck-m4.jpg",
+     "imageAlt": "Metro Truck mobile: Class A course overview",
+     "imageCap": "Class A — course overview with an eligibility check"
+    },
+    {
+     "image": "/assets/img/work-metrotruck-m5.jpg",
+     "imageAlt": "Metro Truck mobile: admissions and contact",
+     "imageCap": "Admissions — contact details and training coordinators"
+    },
+    {
+     "image": "/assets/img/work-metrotruck-m6.jpg",
+     "imageAlt": "Metro Truck mobile: Class D course overview",
+     "imageCap": "Class D — every licence class has its own course page"
+    }
+   ],
+   "top.chip": "<span class=\"pd__live\"></span> Live at <b>metrotrucktraining.com</b>",
+   "top.cap": "Home — the school's promise and both calls to action up front",
    "overview.eyebrow": "Project overview",
    "overview.titleLine": "A trucking career,",
    "overview.titleLine2": "easy to start.",
@@ -5278,9 +5379,76 @@ const entries = [
    ],
    "top.buttonLink": "/get-in-touch",
    "top.buttonText": "Get in Touch",
-   "top.text": "portal.yourcompany.com/dashboard",
    "top.image": "/assets/img/acct-portal.png",
    "top.imageAlt": "Accounting dashboard with profit and loss charts, net income and expense trends",
+   "top.pdWslideList": [
+    {
+     "image": "/assets/img/acct-web-invoices.svg",
+     "imageAlt": "Accounting web invoices list with paid, due and overdue statuses"
+    },
+    {
+     "image": "/assets/img/acct-web-reports.svg",
+     "imageAlt": "Accounting web profit and loss statement and downloadable statements"
+    },
+    {
+     "image": "/assets/img/acct-web-payroll.svg",
+     "imageAlt": "Accounting web payroll with salaries and approval status"
+    }
+   ],
+   "top.image2": "/assets/img/acct-app.svg",
+   "top.imageAlt2": "",
+   "top.tzxSyncList": [
+    {
+     "image": "/assets/img/acct-app-invoices.svg",
+     "imageAlt": ""
+    },
+    {
+     "image": "/assets/img/acct-app-reports.svg",
+     "imageAlt": ""
+    },
+    {
+     "image": "/assets/img/acct-app-payroll.svg",
+     "imageAlt": ""
+    }
+   ],
+   "top.image3": "/assets/img/acct-portal.png",
+   "top.imageAlt3": "",
+   "top.tzxSyncList2": [
+    {
+     "image": "/assets/img/acct-web-invoices.svg",
+     "imageAlt": ""
+    },
+    {
+     "image": "/assets/img/acct-web-reports.svg",
+     "imageAlt": ""
+    },
+    {
+     "image": "/assets/img/acct-web-payroll.svg",
+     "imageAlt": ""
+    }
+   ],
+   "top.image4": "/assets/img/acct-app.svg",
+   "top.imageAlt4": "Accounting app overview: cash balance, income and expenses, and recent invoices",
+   "top.imageCap": "Overview — the live MSC Portal dashboard, and the app overview",
+   "top.pdSlideList": [
+    {
+     "image": "/assets/img/acct-app-invoices.svg",
+     "imageAlt": "Invoices list with paid, due and overdue invoices",
+     "imageCap": "Invoices — sent, due, paid and overdue at a glance"
+    },
+    {
+     "image": "/assets/img/acct-app-reports.svg",
+     "imageAlt": "Quarterly profit and loss with downloadable statements",
+     "imageCap": "Reports — P&L, balance sheet, cash flow and tax, export-ready"
+    },
+    {
+     "image": "/assets/img/acct-app-payroll.svg",
+     "imageAlt": "Next payroll total and employee salaries with approval status",
+     "imageCap": "Payroll — salaries, deductions and approvals in one run"
+    }
+   ],
+   "top.chip": "<span class=\"pd__ok\">✓</span> New profit <b>$2,992</b>",
+   "top.cap": "Overview — the live MSC Portal dashboard, and the app overview",
    "overview.eyebrow": "Project overview",
    "overview.titleLine": "The whole finance office,",
    "overview.titleLine2": "in one app.",

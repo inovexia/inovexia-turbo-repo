@@ -1,5 +1,5 @@
-// AUTO-GENERATED from INW_Variation_1/Light/product-lms.html by scripts/convert-html.mjs.
-// Delete this line to keep hand edits — the converter then leaves the file alone.
+// Generated from INW_Variation_1/Light/product-lms.html, then hand-edited
+// (the banner button link is a field), so the converter leaves it alone.
 import { Fragment } from 'react';
 import BodyClass from '@/components/site/BodyClass';
 import SiteTop from '@/components/site/SiteTop';
@@ -48,7 +48,7 @@ export default function ProductLmsTemplate({ c }) {
                 </h1>
                 <p className="chero__lead reveal" data-delay="2">{c.t("top.lead")}</p>{" "}
                 <div className="phero__actions reveal" data-delay="3">
-                  <a href="#" className="btn btn--primary magnetic">
+                  <a href={c.a("top.buttonLink")} className="btn btn--primary magnetic">
                     {" "}
                     <span>{c.t("top.buttonText")}</span>{" "}
                     <svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true">

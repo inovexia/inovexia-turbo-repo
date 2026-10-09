@@ -6,6 +6,8 @@ import runServiceWebDesign1 from './pages/service-web-design-1';
 import runWorkTonezone1 from './pages/work-tonezone-1';
 import runWorkTonezone2 from './pages/work-tonezone-2';
 import runWorkAccounting1 from './pages/work-accounting-1';
+// Hand-added (not from a design page): the case study device banner.
+import runDeviceSync from './pages/device-sync';
 
 export const pageScripts = {
   "about": [runAbout1],
@@ -13,5 +15,6 @@ export const pageScripts = {
   "home": [runHome1],
   "service-web-design": [runServiceWebDesign1],
   "work-tonezone": [runWorkTonezone1, runWorkTonezone2],
-  "work-accounting": [runWorkAccounting1],
+  "work-metrotruck": [runDeviceSync],
+  "work-accounting": [runWorkAccounting1, runDeviceSync],
 };
