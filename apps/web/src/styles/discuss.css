@@ -27,7 +27,7 @@
 .dsp__num {
   flex: none; width: 30px; height: 30px; border-radius: 50%;
   display: grid; place-items: center;
-  font-family: var(--font-mono); font-size: .7rem; letter-spacing: .04em;
+  font-family: var(--font-body); font-size: .7rem; letter-spacing: .04em;
   border: 1px solid var(--border-2); background: var(--bg); color: var(--muted);
   transition: background .4s var(--ease), color .4s var(--ease), border-color .4s var(--ease), box-shadow .4s var(--ease);
 }
@@ -35,16 +35,16 @@
 .dsp__step.is-current { color: var(--heading); }
 .dsp__step.is-current .dsp__num {
   color: #fff; border-color: transparent;
-  background: linear-gradient(135deg, var(--brand), var(--brand-2));
-  box-shadow: 0 8px 20px -8px rgba(109, 94, 252, .7);
+  background: var(--brand);
+  box-shadow: 0 8px 20px -8px rgba(145, 47, 86, .7);
 }
 .dsp__step.is-done { color: var(--text); }
-.dsp__step.is-done .dsp__num { color: var(--brand-soft); border-color: transparent; background: rgba(109, 94, 252, .13); }
+.dsp__step.is-done .dsp__num { color: var(--brand-soft); border-color: transparent; background: rgba(145, 47, 86, .13); }
 
 .dsp__bar { height: 3px; border-radius: 3px; background: var(--border); overflow: hidden; margin-bottom: 6px; }
 .dsp__bar i {
   display: block; height: 100%; transform-origin: left; transform: scaleX(var(--p, 0));
-  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  background: var(--brand);
   transition: transform .6s var(--ease);
 }
 
@@ -69,8 +69,8 @@
 .dsp-done:focus { outline: none; }
 .dsp-done__badge {
   width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; color: #fff;
-  background: linear-gradient(135deg, var(--brand), var(--brand-2));
-  box-shadow: 0 16px 36px -14px rgba(109, 94, 252, .75);
+  background: var(--brand);
+  box-shadow: 0 16px 36px -14px rgba(145, 47, 86, .75);
 }
 .dsp-done__badge path { stroke-dasharray: 22; stroke-dashoffset: 22; animation: dspTick .6s .3s var(--ease) forwards; }
 @keyframes dspTick { to { stroke-dashoffset: 0; } }
@@ -88,7 +88,7 @@
 .dsp-done__sum dd { margin: 0; color: var(--heading); font-weight: 600; }
 
 .dsp-done__label {
-  margin-top: 6px; font-family: var(--font-mono); font-size: .69rem; letter-spacing: .15em;
+  margin-top: 6px; font-family: var(--font-body); font-size: .69rem; letter-spacing: .15em;
   text-transform: uppercase; color: var(--brand-soft);
 }
 .dsp-done__next {
@@ -102,7 +102,7 @@
 .dsp-done__next li:first-child { border-top: 0; }
 .dsp-done__next li::before {
   content: "0" counter(dsp); grid-row: span 2; padding-top: 3px;
-  font-family: var(--font-mono); font-size: .74rem; color: var(--brand-soft);
+  font-family: var(--font-body); font-size: .74rem; color: var(--brand-soft);
 }
 .dsp-done__next b { color: var(--heading); font-size: .95rem; }
 .dsp-done__next span { color: var(--muted); font-size: .87rem; line-height: 1.55; }

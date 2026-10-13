@@ -25,13 +25,13 @@ const TECHS = [
 ];
 
 const THEMES = {
-  dark: { text: '#e9ecf7', accent: '#a99dff', fill: 'rgba(255,255,255,0.055)', stroke: 'rgba(255,255,255,0.16)', accentFill: 'rgba(109,94,252,0.16)', accentStroke: 'rgba(139,125,255,0.5)' },
-  light: { text: '#232c52', accent: '#5647e8', fill: 'rgba(12,16,40,0.04)', stroke: 'rgba(12,16,40,0.12)', accentFill: 'rgba(109,94,252,0.1)', accentStroke: 'rgba(109,94,252,0.4)' },
+  dark: { text: '#e9ecf7', accent: '#d04f80', fill: 'rgba(255,255,255,0.055)', stroke: 'rgba(255,255,255,0.16)', accentFill: 'rgba(145,47,86,0.22)', accentStroke: 'rgba(208,79,128,0.5)' },
+  light: { text: '#003566', accent: '#912f56', fill: 'rgba(0,8,20,0.04)', stroke: 'rgba(0,8,20,0.12)', accentFill: 'rgba(145,47,86,0.1)', accentStroke: 'rgba(145,47,86,0.4)' },
 };
 const isLight = () => document.documentElement.getAttribute('data-theme') === 'light';
 
 const RADIUS = 5.9; // at 4.6 the 32 labels overlapped illegibly
-const FONT = '600 46px Sora, Inter, system-ui, sans-serif';
+const FONT = '600 46px Poppins, system-ui, sans-serif';
 
 function makeLabel(item) {
   const c = isLight() ? THEMES.light : THEMES.dark;
@@ -113,7 +113,7 @@ export default function TechGlobe({ className, style, label = 'Technologies we w
     // faint wire sphere behind the labels
     const wire = new THREE.Mesh(
       new THREE.IcosahedronGeometry(RADIUS - 1.5, 1),
-      new THREE.MeshBasicMaterial({ color: 0x6d5efc, wireframe: true, transparent: true, opacity: isLight() ? 0.09 : 0.07, depthWrite: false }),
+      new THREE.MeshBasicMaterial({ color: 0x912f56, wireframe: true, transparent: true, opacity: isLight() ? 0.09 : 0.07, depthWrite: false }),
     );
     globe.add(wire);
 

@@ -18,7 +18,7 @@ export const metadata = {
     images: [OG_IMAGE.url],
   },
   icons: {
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 29 9.5v13L16 30 3 22.5v-13z' fill='%236d5efc'/%3E%3Cpath d='M16 9v14M11 11.5v9M21 11.5v9' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 29 9.5v13L16 30 3 22.5v-13z' fill='%23912f56'/%3E%3Cpath d='M16 9v14M11 11.5v9M21 11.5v9' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E",
   },
 };
 
@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400..700&display=swap"
           rel="stylesheet"
         />
       </head>

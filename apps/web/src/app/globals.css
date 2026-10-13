@@ -14,6 +14,12 @@
 @import "../styles/discuss.css" layer(design);
 @import "tailwindcss/utilities.css" layer(utilities);
 
+/* Admin uses the site's body font. */
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "Inter", system-ui, sans-serif;
+}
+
 /* Admin rich-text editor: links visible while editing. */
 .cms-rich a { color: #4f46e5; text-decoration: underline; }
 .cms-rich:empty::before { content: "Type here…"; color: #94a3b8; }

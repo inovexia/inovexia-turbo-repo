@@ -21,7 +21,7 @@ export default function SiteRuntime() {
 
     const theme = document.documentElement.getAttribute('data-theme');
     document.querySelector('meta[name="theme-color"]')
-      ?.setAttribute('content', theme === 'dark' ? '#05060f' : '#f5f6fb');
+      ?.setAttribute('content', theme === 'dark' ? '#000814' : '#f5f6fb');
 
     // Each script is isolated, as separate <script> tags were: one failing
     // logs its error and the rest still run, instead of an exception in this

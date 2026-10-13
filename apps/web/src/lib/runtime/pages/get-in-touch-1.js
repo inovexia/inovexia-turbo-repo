@@ -17,17 +17,17 @@ export default function run() {
       answer = a + b;
       var dark = document.documentElement.getAttribute('data-theme') === 'dark';
       ctx.clearRect(0, 0, cv.width, cv.height);
-      ctx.fillStyle = dark ? '#151833' : '#eef0f8'; ctx.fillRect(0, 0, cv.width, cv.height);
+      ctx.fillStyle = dark ? '#001022' : '#eef0f8'; ctx.fillRect(0, 0, cv.width, cv.height);
       for (var i = 0; i < 6; i++) {           // noise lines
-        ctx.strokeStyle = 'rgba(109, 94, 252, ' + (0.18 + Math.random() * 0.2) + ')';
+        ctx.strokeStyle = 'rgba(145, 47, 86, ' + (0.18 + Math.random() * 0.2) + ')';
         ctx.beginPath(); ctx.moveTo(Math.random() * cv.width, Math.random() * cv.height);
         ctx.lineTo(Math.random() * cv.width, Math.random() * cv.height); ctx.stroke();
       }
       var text = a + ' + ' + b + ' = ?', x = 16;
-      ctx.font = '700 22px Sora, Segoe UI, sans-serif'; ctx.textBaseline = 'middle';
+      ctx.font = '700 22px Poppins, Segoe UI, sans-serif'; ctx.textBaseline = 'middle';
       for (var j = 0; j < text.length; j++) {  // each character slightly tilted
         ctx.save(); ctx.translate(x, cv.height / 2 + (Math.random() * 6 - 3)); ctx.rotate((Math.random() - 0.5) * 0.35);
-        ctx.fillStyle = dark ? '#e9ecf7' : '#0a1030'; ctx.fillText(text[j], 0, 0); ctx.restore();
+        ctx.fillStyle = dark ? '#e9ecf7' : '#003566'; ctx.fillText(text[j], 0, 0); ctx.restore();
         x += text[j] === ' ' ? 7 : ctx.measureText(text[j]).width + 2;
       }
       cv.setAttribute('aria-label', 'Captcha: what is ' + a + ' plus ' + b + '?');

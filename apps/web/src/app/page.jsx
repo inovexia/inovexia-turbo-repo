@@ -95,13 +95,6 @@ export default async function Page() {
               <div className="stack-map reveal" id="stackMap" data-cursor="DRAG">
                 {/* orbit rings, connector beams and travelling sparks */}
                 <svg className="stack-map__svg" viewBox="0 0 560 440" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-                  <defs>
-                    <radialGradient id="smCore" cx="50%" cy="50%">
-                      <stop offset="0" stopColor="#6d5efc" stopOpacity=".5" />
-                      <stop offset="1" stopColor="#6d5efc" stopOpacity="0" />
-                    </radialGradient>
-                  </defs>
-                  <ellipse className="sm-halo" cx="269" cy="211" rx="200" ry="150" fill="url(#smCore)" />
                   <g className="sm-rings">
                     <ellipse className="sm-ring sm-ring--1" cx="269" cy="211" rx="120" ry="52" />
                     <ellipse className="sm-ring sm-ring--2" cx="269" cy="211" rx="215" ry="95" />

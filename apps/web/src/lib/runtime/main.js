@@ -84,7 +84,7 @@ export default function initSite() {
       root.setAttribute('data-theme', next);
       try { localStorage.setItem(KEY, next); } catch (e) {}
       var meta = $('meta[name="theme-color"]');
-      if (meta) meta.setAttribute('content', next === 'light' ? '#f5f6fb' : '#05060f');
+      if (meta) meta.setAttribute('content', next === 'light' ? '#f5f6fb' : '#000814');
       document.dispatchEvent(new CustomEvent('inovexia:theme', { detail: { theme: next } }));
     }
     if (toggle) {
