@@ -3,6 +3,7 @@ import SiteTop from '@/components/site/SiteTop';
 import Header from '@/components/site/Header';
 import Footer from '@/components/site/Footer';
 import DiscussForm from './DiscussForm';
+import { OG_IMAGE, SITE_NAME } from '@/lib/cms/content';
 
 export const metadata = {
   title: 'Discuss Your Project — Inovexia Software',
@@ -13,6 +14,8 @@ export const metadata = {
     description: 'Share your project brief and get a recommendation, rough timeline and honest budget range within one business day.',
     type: 'website',
     url: 'https://inovexiasoftware.com/discuss-your-project',
+    siteName: SITE_NAME,
+    images: [OG_IMAGE],
   },
 };
 

@@ -1,8 +1,22 @@
 import './globals.css';
 import SiteRuntime from '@/components/site/SiteRuntime';
+import { OG_IMAGE, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE } from '@/lib/cms/content';
 
 export const metadata = {
   metadataBase: new URL('https://inovexiasoftware.com'),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    type: 'website',
+    siteName: SITE_NAME,
+    images: [OG_IMAGE],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [OG_IMAGE.url],
+  },
   icons: {
     icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 29 9.5v13L16 30 3 22.5v-13z' fill='%236d5efc'/%3E%3Cpath d='M16 9v14M11 11.5v9M21 11.5v9' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E",
   },

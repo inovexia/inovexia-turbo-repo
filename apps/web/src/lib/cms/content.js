@@ -14,6 +14,18 @@ const API = (process.env.API_URL || 'http://localhost:4000').replace(/\/$/, '');
 const SITE = (process.env.SITE_URL || 'https://inovexiasoftware.com').replace(/\/$/, '');
 export const REVALIDATE = 300;
 
+/* Site-wide share defaults. A page's openGraph replaces its parent's
+   wholesale in Next, so withSeo fills these in on every page. */
+export const SITE_NAME = 'Inovexia Software';
+export const SITE_TITLE = 'Inovexia Software — Providing Innovative Digital Solutions';
+export const SITE_DESCRIPTION = 'We help businesses around the world grow online with scalable, extensible software — websites, apps and platforms built to last.';
+export const OG_IMAGE = {
+  url: `${SITE}/assets/img/og-image.jpg`,
+  width: 1200,
+  height: 630,
+  alt: 'Inovexia Software — Providing innovative digital solutions.',
+};
+
 async function fetchJson(path) {
   try {
     const res = await fetch(`${API}${path}`, { next: { revalidate: REVALIDATE, tags: ['content'] } });
@@ -50,14 +62,16 @@ function withSeo(META, seo, path) {
   const description = seo.description || META.description;
   const md = { ...META, title, description };
   if (path) md.alternates = { canonical: `${SITE}${path}` };
-  if (META.openGraph) {
-    md.openGraph = {
-      ...META.openGraph,
-      title: seo.title || META.openGraph.title || title,
-      description: seo.description || META.openGraph.description || description,
-      ...(path && { url: `${SITE}${path}` }),
-    };
-  }
+  const og = META.openGraph || {};
+  md.openGraph = {
+    type: 'website',
+    siteName: SITE_NAME,
+    images: [OG_IMAGE],
+    ...og,
+    title: seo.title || og.title || title,
+    description: seo.description || og.description || description,
+    ...(path && { url: `${SITE}${path}` }),
+  };
   return md;
 }
 
