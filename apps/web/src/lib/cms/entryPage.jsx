@@ -5,8 +5,8 @@ import { entryMetadata, getEntries, getEntry, templateAccessor } from './content
 
 /* The three "entry with its own page" routes (/service, /product,
    /case-study) are the same code: find the published entry, render its
-   template with its content. New entries render on first request — no
-   rebuild — and are cached until the next save. */
+   template with its content. Every page is pre-rendered at build time;
+   an unknown slug is a 404. */
 export function entryRoute(type) {
   async function load(params) {
     const { slug } = await params;

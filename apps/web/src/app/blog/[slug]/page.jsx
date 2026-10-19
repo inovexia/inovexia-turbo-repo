@@ -5,8 +5,8 @@ import { entryMetadata, getEntries, getEntry, loadPage } from '@/lib/cms/content
 
 /* A blog post: the shared article page (Pages → "Blog article (shared
    parts)") around this post's article and the recent-posts slider. */
-export const revalidate = 300;
-export const dynamicParams = true;
+export const dynamic = 'force-static';
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return (await getEntries('blog')).map((p) => ({ slug: p.slug }));

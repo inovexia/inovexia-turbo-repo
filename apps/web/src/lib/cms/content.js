@@ -1,18 +1,14 @@
-/* Content for the public site, read from the API (apps/api) and cached by
-   Next. The admin's saves expire the 'content' cache tag through
-   /revalidate, so edits appear on the next request; the 5-minute
-   revalidate is only a safety net.
-
-   If the API cannot be reached, pages render the design defaults and the
-   seed entries instead of failing — the site never goes blank. */
+/* Content for the public site. Everything is static: pages render the
+   design defaults and the entries bundled in @inovexia/content (seed),
+   so every page — list and detail alike — is pre-rendered at build time
+   and nothing is read from the API. To change content, edit
+   packages/content and rebuild. */
 import { cache } from 'react';
 import { defaultsOf, fragments, pages, templates } from '@inovexia/content';
 import { seedEntries } from '@inovexia/content/seed';
 import { accessor } from './accessor';
 
-const API = (process.env.API_URL || 'http://localhost:4000').replace(/\/$/, '');
 const SITE = (process.env.SITE_URL || 'https://inovexiasoftware.com').replace(/\/$/, '');
-export const REVALIDATE = 300;
 
 /* Site-wide share defaults. A page's openGraph replaces its parent's
    wholesale in Next, so withSeo fills these in on every page. */
@@ -26,25 +22,13 @@ export const OG_IMAGE = {
   alt: 'Inovexia Software — Providing innovative digital solutions.',
 };
 
-async function fetchJson(path) {
-  try {
-    const res = await fetch(`${API}${path}`, { next: { revalidate: REVALIDATE, tags: ['content'] } });
-    if (res.status === 404) return { notFound: true };
-    if (!res.ok) return null;
-    return await res.json();
-  } catch {
-    return null; // API down: callers fall back to defaults / seed
-  }
-}
-
 /* ------------------------------------------------------------- pages */
 
-/* A page's content: design defaults with the saved edits on top. */
+/* A page's content: the design defaults. */
 export const getPageData = cache(async (name) => {
   const m = pages[name];
   if (!m) throw new Error(`Unknown page "${name}"`);
-  const res = await fetchJson(`/api/content/pages/${encodeURIComponent(name)}`);
-  return { ...defaultsOf(m.fields), ...(res?.data || {}) };
+  return defaultsOf(m.fields);
 });
 
 export async function loadPage(name) {
@@ -80,18 +64,13 @@ function withSeo(META, seo, path) {
 const bySort = (a, b) => (a.sort ?? 0) - (b.sort ?? 0) || a.title.localeCompare(b.title);
 const seedOf = (type) => seedEntries.filter((e) => e.type === type);
 
-/* Published entries of a type, in admin order. */
+/* Published entries of a type, in sort order. */
 export const getEntries = cache(async (type) => {
-  const res = await fetchJson(`/api/content/entries?type=${type}`);
-  const list = res?.items ?? seedOf(type);
-  return list.filter((e) => e.published).sort(bySort);
+  return seedOf(type).filter((e) => e.published).sort(bySort);
 });
 
 /* One published entry, or null (→ 404). */
 export const getEntry = cache(async (type, slug) => {
-  const res = await fetchJson(`/api/content/entries/${type}/${encodeURIComponent(slug)}`);
-  if (res?.notFound) return null;
-  if (res?.item) return res.item.published ? res.item : null;
   return seedOf(type).find((e) => e.slug === slug && e.published) || null;
 });
 

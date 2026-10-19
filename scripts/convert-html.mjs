@@ -11,8 +11,6 @@
      apps/web/src/lib/runtime/pages/*.js   each page's inline <script>
      apps/web/src/lib/runtime/registry.js  script group → those scripts
      packages/content/manifests/*.json     every editable field + its default
-     packages/content/seed/entries.json    blogs, services, products, case
-                                           studies as they are in the design
      apps/web/public/assets/img/**, apps/web/src/styles/site.css
 
    The markup is converted node for node (see scripts/convert/engine.mjs),
@@ -32,7 +30,6 @@ import {
   Scope, find, findAll, hasClass, humanize, isEl, jsStr, kids,
   renderElement, renderFragment, renderNodes, walk,
 } from './convert/engine.mjs';
-import { extractSeed } from './convert/seed.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = path.join(ROOT, 'INW_Variation_1', 'Light');
@@ -559,13 +556,9 @@ export const { pages, templates, fragments } = manifests;
 `);
 written.push('manifests.generated.js');
 
-// ---- seed content (collections as they are in the design)
-const seed = extractSeed({ parsed, manifests, rewriteUrl, routeFor });
-fs.writeFileSync(path.join(CONTENT, 'src', 'seed.generated.js'), `// ${MARK} by scripts/convert-html.mjs — the design's blogs, services, products and case studies.
-const entries = ${JSON.stringify(seed, null, 1)};
-
-export default entries;
-`);
+// ---- seed content: blogs, services, products and case studies are
+// hardcoded in packages/content/src/data/<type>/<slug>.js and edited by
+// hand, so the converter no longer writes them.
 
 // ---- template + script registries for the web app
 fs.writeFileSync(path.join(TPL_DIR, 'index.js'), `// ${MARK} by scripts/convert-html.mjs — template name → component.
@@ -589,5 +582,4 @@ copyAssets();
 const count = (fields) => fields.reduce((n, f) => n + (f.kind === 'list' ? 1 + count(f.item) : 1), 0);
 console.log(`  ${Object.keys(manifests.pages).length} pages, ${Object.keys(manifests.templates).length} templates, ${Object.keys(manifests.fragments).length} fragments`);
 for (const group of ['pages', 'templates']) for (const [n, m] of Object.entries(manifests[group])) console.log(`    ${group}/${n}: ${count(m.fields)} fields`);
-console.log(`  seed: ${seed.length} entries (${['blog', 'service', 'product', 'case'].map((t) => `${seed.filter((e) => e.type === t).length} ${t}`).join(', ')})`);
 console.log(`  wrote ${written.length} files. Done.`);
